@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/raj'
+let g:netrw_dirhist_2='/home/raj/gw-c4u'
+let g:netrw_dirhist_3='/home/raj/gw-c4u/log'
+let g:netrw_dirhist_4='/home/raj'
+let g:netrw_dirhist_5='/home/raj/gw-c4u'
+let g:netrw_dirhist_6='/home/raj/gw-c4u/app'
+let g:netrw_dirhist_7='/home/raj/gw-c4u/app/controllers'
+let g:netrw_dirhist_8='/home/raj/rails_practice/cool-to-do'
