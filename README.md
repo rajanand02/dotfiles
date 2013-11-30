@@ -1,5 +1,12 @@
-dot_files
+dotfiles
 =========
+###Uninstall old vim
+```bash
+  sudo apt-get remove vim vim-runtime gvim 
+  
+  #On ubuntu  12.04.2 you have to remove these packages as well
+  sudo apt-get remove vim-tiny vim-common vim-gui-common
+```
 ###Install lua-5
 ```bash
   curl -R -O http://www.lua.org/ftp/lua-5.2.2.tar.gz
