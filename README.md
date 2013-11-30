@@ -1,28 +1,31 @@
 dot_files
 =========
-"install lua-5"
-
+###Install lua-5
+```bash
   curl -R -O http://www.lua.org/ftp/lua-5.2.2.tar.gz
   tar zxf lua-5.2.2.tar.gz
   cd lua-5.2.2
   make linux test
   sudo cp src/lua /usr/local/bin/lua
   sudo cp -r src /usr/local/include/
-
-
-"Install luajit"
-
+```
+###Install luajit
+```bash
   sudo apt-get install luajit libluajit-5.1
- 
-"Download latest vim"
+```
+###Download latest vim
+```bash
 
   wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
   tar -xvjf  vim-7.4.tar.bz2
   cd vim74
-
-"Apply patch to make vim work with lua and luajit"
-
+```
+###Apply patch to make vim work with lua and luajit
+```bash
   curl https://gist.github.com/shirosaki/5663617/raw | patch -p1
+```
+### Compile and install vim
+```bash
 
   ./configure --with-features=huge \
     --enable-rubyinterp \
@@ -33,7 +36,9 @@ dot_files
 
 make VIMRUNTIMEDIR=/usr/share/vim/vim74
 sudo make install
+```
 
-"check vim version"
-  
+###check vim version
+```bash
   vim --version
+```
