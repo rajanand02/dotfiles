@@ -64,16 +64,31 @@ nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :x<CR>
-nnoremap <leader>cp :"+y<CR>
 nnoremap <leader>ev :e ~/.vimrc<CR>
 nnoremap <leader>sv :so ~/.vimrc<CR>
 nnoremap <leader>p :set paste! <CR>
 nnoremap <leader>bi :BundleInstall<CR>
+nnoremap <leader>ntt :NERDTreeTabsOpen<CR>
+nnoremap <leader>rf :e Gemfile<CR>
+nnoremap <leader>rr :e config/routes.rb<CR>
+nnoremap <leader>rv :Rview<space>
+nnoremap <leader>rc :Rcontroller<space>
+nnoremap <leader>rg :Rgenerate<space>
+nnoremap <leader>rx :Rextract<space>
+nnoremap <leader>rm :Rmodel<space>
+nnoremap <leader>rs :Rstylesheet<space>
+nnoremap <leader>np :Nyancat<CR>
 nnoremap <C-s> :w<CR>
-:map <F7> :w !xclip<CR><CR>
-:vmap <leader>yc "+y
-:map <S-F7> :r!xclip -o<CR>
 nnoremap <leader>s :%s/
+nnoremap <Left> :vertical resize +5<CR>
+nnoremap <Right> :vertical resize -5<CR>
+nnoremap <Up> :resize +5<CR>
+nnoremap <Down> :resize -5<CR>
+" Copy to 'clipboard registry'
+vmap <C-c> "+y
+
+" Select all text
+nmap <C-a> ggVG
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 runtime! macros/matchit.vim
 au BufNewFile,BufRead *.erb set filetype=eruby.html
@@ -97,10 +112,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
       \ "\<Plug>(neosnippet_expand_or_jump)"
       \: "\<TAB>"
 " Make arrowkey do something usefull, resize the viewports accordingly
-nnoremap <Left> :vertical resize +5<CR>
-nnoremap <Right> :vertical resize -5<CR>
-nnoremap <Up> :resize +5<CR>
-nnoremap <Down> :resize -5<CR>
 
 " For snippet_complete marker.
 if has('conceal')
@@ -144,14 +155,6 @@ let g:multi_cursor_next_key='<C-m>'
 
 "Rails vim
 "Create command abbreviations that auto corrects ;)
-nnoremap <leader>rf :e Gemfile<CR>
-nnoremap <leader>rr :e config/routes.rb<CR>
-nnoremap <leader>rv :Rview<space>
-nnoremap <leader>rc :Rcontroller<space>
-nnoremap <leader>rg :Rgenerate<space>
-nnoremap <leader>rm :Rmodel<space>
-nnoremap <leader>rs :Rstylesheet<space>
-nnoremap <leader>np :Nyancat<CR>
 
 "emmet zencoding
 let g:user_emmet_settings = {
