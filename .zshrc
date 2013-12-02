@@ -12,6 +12,7 @@ ZSH_THEME="gnzh"
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmux="tmux -u"
 alias v="vim"
+
 # my custom settings
 alias brb='sudo pm-hibernate'
 alias bye='sudo poweroff'

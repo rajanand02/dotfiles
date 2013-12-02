@@ -80,6 +80,7 @@ nnoremap <leader>rs :Rstylesheet<space>
 nnoremap <leader>np :Nyancat<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <leader>s :%s/
+" Make arrowkey do something usefull, resize the viewports accordingly
 nnoremap <Left> :vertical resize +5<CR>
 nnoremap <Right> :vertical resize -5<CR>
 nnoremap <Up> :resize +5<CR>
@@ -111,7 +112,6 @@ imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
       \ "\<Plug>(neosnippet_expand_or_jump)"
       \: "\<TAB>"
-" Make arrowkey do something usefull, resize the viewports accordingly
 
 " For snippet_complete marker.
 if has('conceal')
