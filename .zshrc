@@ -12,29 +12,11 @@ ZSH_THEME="gnzh"
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmux="tmux -u"
 alias v="vim"
-
 # my custom settings
 alias brb='sudo pm-hibernate'
 alias bye='sudo poweroff'
 alias re='sudo reboot'
 alias x='exit'
-# rails projects
-alias raj='cd /home/raj/'
-alias ud='cd /home/raj/udproducts/'
-alias udn='cd /home/raj/udproducts/nthat/'
-alias vn='cd /home/raj/udproducts/nthat/ && vim'
-
-alias udc='cd /home/raj/udproducts/gw-c4u/'
-alias vc='cd /home/raj/udproducts/gw-c4u/ && vim'
-
-alias udt='cd /home/raj/udproducts/solid_cube/'
-alias vt='cd /home/raj/udproducts/solid_cube/ && vim'
-
-alias udno='cd /home/raj/udproducts/notice/'
-alias vno='cd /home/raj/udproducts/notice/ && vim'
-
-alias udi='cd /home/raj/udproducts/insure/'
-alias vin='cd /home/raj/udproducts/insure/ && vim'
 
 alias vrc='vim ~/.vimrc'
 alias zrc='vim ~/.zshrc'
