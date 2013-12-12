@@ -5,13 +5,12 @@ if has('vim_starting')
 endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
-"set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 "setting goes here
-set nocompatible
+"set nocompatible
 let mapleader=","
 syntax on
-set number
 set relativenumber
 filetype plugin indent on 
 set noswapfile
@@ -38,10 +37,11 @@ let g:startify_custom_header= [
       \ '',
       \ ]
 let g:EasyMotion_leader_key = '<Leader><Leader>'
-autocmd VimEnter * NERDTree
-autocmd VimEnter * NERDTreeTabsOpen 
-autocmd VimEnter * NERDTreeMirror
-autocmd VimEnter * wincmd p
+"let g:NERDTreeWinPos = "right"
+"autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTreeTabsOpen 
+"autocmd VimEnter * NERDTreeMirror
+"autocmd VimEnter * wincmd p
 set tabstop=2 shiftwidth=2 softtabstop=2
 set background=dark
 if has('gui_running')
@@ -61,7 +61,7 @@ else
 endif
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 set t_Co=256
-let g:vimfiler_as_default_explorer = 1
+"let g:vimfiler_as_default_explorer = 1
 "autocmd VimEnter * VimFilerExplorer
 "autocmd VimEnter * wincmd p
 set tabstop=2 shiftwidth=2 softtabstop=2
@@ -85,6 +85,7 @@ nnoremap <leader>rx :Rextract<space>
 nnoremap <leader>rm :Rmodel<space>
 nnoremap <leader>rs :Rstylesheet<space>
 nnoremap <leader>np :Nyancat<CR>
+nnoremap <leader>vf :VimFilerCurrentDir<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <leader>s :%s/
 nnoremap <Left> :vertical resize +5<CR>
