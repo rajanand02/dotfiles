@@ -3,8 +3,8 @@ export EDITOR='vim'
 ZSH_THEME="gnzh"
 
 # my custom settings
-alias tmux="TERM=screen-256color-bce tmux"
-alias tmux="tmux -u"
+#alias tmux="TERM=screen-256color-bce tmux"
+#alias tmux="tmux -u"
 alias brb='sudo pm-hibernate'
 alias v="vim"
 alias bye='sudo poweroff'
@@ -27,10 +27,8 @@ plugins=(debian history tmux tmuxinator git git-flow github github-flow bundler 
 
 source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM 
-
 source ~/.zsh/zshrc.sh
 
-export PATH=/home/raj/Komodo-Edit/bin:$PATH
 export PATH=$PATH:/usr/local/rvm/gems/ruby-2.0.0-p247/bin:/usr/local/rvm/gems/ruby-2.0.0-p247@global/bin:/usr/local/rvm/rubies/ruby-2.0.0-p247/bin:/usr/local/rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/rvm/gems/ruby-2.0.0-p247/bin:/usr/local/rvm/gems/ruby-2.0.0-p247@global/bin:/usr/local/rvm/rubies/ruby-2.0.0-p247/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/gems/ruby-2.0.0-p247/bin:/usr/local/rvm/gems/ruby-2.0.0-p247@global/bin:/usr/local/rvm/rubies/ruby-2.0.0-p247/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
