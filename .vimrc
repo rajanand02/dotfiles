@@ -26,7 +26,6 @@ set backspace=indent,eol,start " Make backspace behave normally.
 set wildmode=list:longest,full
 set wildmenu
 set tabstop=2 shiftwidth=2 softtabstop=2
-set background=dark
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 set t_Co=256
 
@@ -35,7 +34,8 @@ set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save
 
-colorscheme solarized 
+colorscheme solarized
+set background=dark
 "let g:solarized_termtrans=1
 "let g:solarized_termcolors=16
 "let g:solarized_contrast="normal"
@@ -86,17 +86,26 @@ nnoremap <leader>p :set paste! <CR>
 nnoremap <leader>s :%s/
 nnoremap <C-s> :w<CR>
 nnoremap <Leader>g gg=G<bar>gi<Esc>
-inoremap <Leader>i <Esc>     
-vnoremap <Leader>i <Esc>     
+inoremap ii <Esc>
+vnoremap ii <Esc>
 nnoremap j gj
 nnoremap k gk
 nnoremap 0 g0
 nnoremap $ g$
+nnoremap <Leader>. :tabnext<CR>
+nnoremap <Leader>, :tabprevious<CR>
+
+"nnoremap <leader>bi :VimShellPop<CR>bundle install<CR>exit<CR>
+"nnoremap <leader>bi :!bundle install<CR>
+"nnoremap <Leader>bi :Vim
+"nnoremap <leader>bi :call feedkeys("bundle install\<lt>CR>exit\<lt>CR>", "t")<Bar>VimShellPop<CR>
+nnoremap <leader>bi :call feedkeys("bundle install\<lt>CR>", "t")<Bar>VimShellPop<CR>
+"nnoremap <leader>bi :new<Bar>0r!bundle install<CR>
 
 "key mappings for plugins
 nnoremap <leader>ntt :NERDTreeTabsOpen<CR>
 nnoremap <leader>nt :NERDTree<CR>
-nnoremap <leader>bi :NeoBundleInstall<CR>
+nnoremap <leader>nbi :NeoBundleInstall<CR>
 nnoremap <leader>np :Nyancat<CR>
 nnoremap <leader>fc :VimFilerCurrentDir<CR>
 nnoremap <leader>fb :VimFilerBufferDir<CR>
@@ -113,6 +122,7 @@ nnoremap <leader>rx :Rextract<space>
 nnoremap <leader>rm :Rmodel<space>
 nnoremap <leader>rs :Rstylesheet<space>
 nnoremap <leader>ge :e Gemfile<CR>
+
 
 "map arrowkey to change viewports size
 nnoremap <Left> :vertical resize -5<CR>
@@ -200,21 +210,40 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-let g:move_key_modifier = 'C'
-let g:lightline = {
-      \ 'colorscheme': 'powerline',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"x":""}',
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '|', 'right': '|' }
-      \ }
+"let g:move_key_modifier = 'C'
+"let g:Powerline_symbols = 'fancy'
+"let g:lightline = {
+      "\ 'colorscheme': 'powerline',
+      "\ 'active': {
+      "\   'left': [ [ 'mode', 'paste' ],
+      "\             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+      "\ },
+      "\ 'component': {
+      "\   'readonly': '%{&readonly?"x":""}',
+      "\ },
+      "\ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      "\ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
+      "\ }
+
+
+      "\ 'separator': { 'left': '', 'right': '' },
+      "\ 'subseparator': { 'left': '|', 'right': '|' }
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme= 'wombat'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#empty_message = 'No branch'
 
 "Syntastic customization
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_style_error_symbol = '✠'
 let g:syntastic_warning_symbol = '∆'
 let g:syntastic_style_warning_symbol = '≈'
+
+"VimShell settings and key mappings
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+let g:vimshell_prompt =  '~~> '
 
 "mult cursor  plugin
 let g:multi_cursor_next_key='<C-m>'
@@ -309,9 +338,11 @@ NeoBundle "garbas/vim-snipmate"
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'dhruvasagar/vim-railscasts-theme'
 NeoBundle 'altercation/vim-colors-solarized.git'
-
+"NeoBundle 'Lokaltog/vim-powerline'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'Zuckonit/vim-airline-tomato'
 NeoBundle 'FredKSchott/CoVim'
-NeoBundle 'itchyny/lightline.vim'
+"NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'koron/nyancat-vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mattn/webapi-vim'
