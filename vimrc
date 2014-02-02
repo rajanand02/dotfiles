@@ -213,6 +213,8 @@ let g:airline#extensions#branch#empty_message = 'No branch'
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 "Starify settings
+let g:startify_custom_footer =
+            \ map(split(system('tips | cowsay here comes the mighty weapon'), '\n'), '"   ". v:val') + ['']
 let g:startify_custom_header= [
       \ ' _      _   _                 _ _   ',
       \ '| |    | | ( )               | | | ',

@@ -5,12 +5,13 @@ ZSH_VCS_PROMPT_ENABLE_CACHING='true'
 RPROMPT='$(vcs_super_info)'
 export EDITOR='vim'
 ZSH_THEME="raj"
-
+fortune | cowsay
+#COWDIR=/usr/share/cowsay/cows/; COWNUM=$(($RANDOM%$(ls $COWDIR | wc -l))); COWFILE=$(ls $COWDIR | sed -n ''$COWNUM'p'); fortune | cowsay -f $COWFILE
 # my custom settings
-alias brb='sudo pm-hibernate'
+alias brb='cowsay "i will be waiting buddy" && sudo pm-hibernate'
 alias v="vim"
-alias bye='sudo poweroff'
-alias re='sudo reboot'
+alias bye='cowsay "Bye bye buddy" && sudo poweroff'
+alias re='cowsay "we will meet soon" && sudo reboot'
 alias x='exit'
 alias ag='apt-get'
 alias install='sudo apt-get install'
