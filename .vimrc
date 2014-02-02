@@ -28,72 +28,45 @@ set wildmenu
 set tabstop=2 shiftwidth=2 softtabstop=2
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 set t_Co=256
-
 set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save
-
 colorscheme solarized
 set background=dark
 "let g:solarized_termtrans=1
 "let g:solarized_termcolors=16
 "let g:solarized_contrast="normal"
 "let g:solarized_visibility="normal"
-let g:cssColorVimDoNotMessMyUpdatetime = 1
-
-"Starify settings
-let g:startify_custom_header= [
-      \ ' _      _   _                 _ _   ',
-      \ '| |    | | ( )               | | | ',
-      \ '| | ___| |_|/ ___   _ __ ___ | | | ',
-      \ '| |/ _ \ __| / __| |  __/ _ \| | |  ',
-      \ '| |  __/ |_  \__ \ | | | (_) | | | ',
-      \ '|_|\___|\__| |___/ |_|  \___/|_|_| ', 
-      \ '',
-      \ '',
-      \ ]
-let g:startify_files_number        = 10
-let g:startify_session_persistence = 1
-let g:startify_session_autoload    = 1
-let g:startify_enable_special      = 0
-let g:startify_files_number        = 5
-let g:startify_change_to_dir       = 0
-
-"Easy motion leader key-mapping
-let g:EasyMotion_leader_key = '<Leader><Leader>'
-
-"Nerdtree settings
-autocmd VimEnter * NERDTree
-"autocmd VimEnter * NERDTreeTabsOpen 
-"autocmd VimEnter * NERDTreeMirror
-autocmd VimEnter * wincmd p
-
-"vimfiler settings
-let g:vimfiler_as_default_explorer = 1
-"autocmd VimEnter * VimFilerExplorer
-"autocmd VimEnter * wincmd p
 
 "key mappings to normal vim actions
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <leader>Q :q!<CR>
+nnoremap Q :q!<CR>                             "avoid entering ex mode 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :x<CR>
 nnoremap <leader>ev :e ~/.vimrc<CR>
-nnoremap <leader>sv :so ~/.vimrc<CR>
+nnoremap <leader>so :so %<CR>
 nnoremap <leader>p :set paste! <CR>
 nnoremap <leader>s :%s/
 nnoremap <C-s> :w<CR>
 nnoremap <Leader>g gg=G<bar>gi<Esc>
-inoremap ii <Esc>
-vnoremap ii <Esc>
+inoremap jk <Esc>
+vnoremap jk <Esc>
 nnoremap j gj
 nnoremap k gk
 nnoremap 0 g0
 nnoremap $ g$
-nnoremap <Leader>. :tabnext<CR>
-nnoremap <Leader>, :tabprevious<CR>
+nnoremap > :tabnext<CR>
+nnoremap < :tabprevious<CR>
+nnoremap <Leader>te :tabe 
+nnoremap F :bnext<CR>
+nnoremap B :bprevious<CR>
+
+" Copy to 'clipboard registry'
+vmap <C-c> "+y
+nmap <C-a> ggVG
+vmap <C-x> dd
 
 "nnoremap <leader>bi :VimShellPop<CR>bundle install<CR>exit<CR>
 "nnoremap <leader>bi :!bundle install<CR>
@@ -121,8 +94,8 @@ nnoremap <leader>rg :Rgenerate<space>
 nnoremap <leader>rx :Rextract<space>
 nnoremap <leader>rm :Rmodel<space>
 nnoremap <leader>rs :Rstylesheet<space>
+nnoremap <leader>rj :Rjavascript<space>
 nnoremap <leader>ge :e Gemfile<CR>
-
 
 "map arrowkey to change viewports size
 nnoremap <Left> :vertical resize -5<CR>
@@ -130,17 +103,6 @@ nnoremap <Right> :vertical resize +5<CR>
 nnoremap <Up> :resize -5<CR>
 nnoremap <Down> :resize +5<CR>
 
-" Copy to 'clipboard registry'
-vmap <C-c> "+y
-nmap <C-a> ggVG
-
-"Fugitive 
-nnoremap <silent> <leader>gs :Gstatus<CR>
-nnoremap <silent> <leader>ga :Git add -A<CR>
-nnoremap <silent> <leader>gd :Gdiff<CR>
-nnoremap <silent> <leader>gc :Gcommit<CR>
-nnoremap <silent> <leader>gp :Git push<CR>
-nnoremap <silent> <leader>gr :Gremove<CR>
 
 " Unite
 nmap , [unite]
@@ -164,6 +126,14 @@ nnoremap <silent> [unite]fp :Unite -no-split -buffer-name=files -default-action=
 nnoremap <silent> [unite]fa :Unite -no-split -start-insert -auto-preview file_rec/async <cr>
 nnoremap <silent> [unite]fc :Unite file_rec/async<cr>
 let g:unite_source_rec_async_command = 'ack -f --nofilter'
+
+"Fugitive 
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>ga :Git add -A<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>gr :Gremove<CR>
 
 " Select all text
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -228,18 +198,57 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
       "\ 'separator': { 'left': '', 'right': '' },
       "\ 'subseparator': { 'left': '|', 'right': '|' }
-
+set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme= 'wombat'
 let g:airline#extensions#branch#enabled = 1
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+  let g:airline_symbols.branch = '😈'  
 let g:airline#extensions#branch#empty_message = 'No branch'
+
+
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+"Starify settings
+let g:startify_custom_header= [
+      \ ' _      _   _                 _ _   ',
+      \ '| |    | | ( )               | | | ',
+      \ '| | ___| |_|/ ___   _ __ ___ | | | ',
+      \ '| |/ _ \ __| / __| |  __/ _ \| | |  ',
+      \ '| |  __/ |_  \__ \ | | | (_) | | | ',
+      \ '|_|\___|\__| |___/ |_|  \___/|_|_| ', 
+      \ '',
+      \ '',
+      \ ]
+let g:startify_files_number        = 10
+let g:startify_session_persistence = 1
+let g:startify_session_autoload    = 1
+let g:startify_enable_special      = 0
+let g:startify_files_number        = 5
+let g:startify_change_to_dir       = 0
+
+"Easy motion leader key-mapping
+let g:EasyMotion_leader_key = '<Leader><Leader>'
+
+"Nerdtree settings
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+"autocmd VimEnter * NERDTreeTabsOpen 
+"autocmd VimEnter * NERDTreeMirror
+
+"vimfiler settings
+"let g:vimfiler_as_default_explorer = 1
+"autocmd VimEnter * VimFilerExplorer
+"autocmd VimEnter * wincmd p
 
 "Syntastic customization
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_style_error_symbol = '✠'
 let g:syntastic_warning_symbol = '∆'
-let g:syntastic_style_warning_symbol = '≈'
+let g:syntastic_style_warning_symbol = '☢'
 
 "VimShell settings and key mappings
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
@@ -341,8 +350,12 @@ NeoBundle 'altercation/vim-colors-solarized.git'
 "NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'Zuckonit/vim-airline-tomato'
+NeoBundle 'gabrielelana/pomicons'
 NeoBundle 'FredKSchott/CoVim'
+NeoBundle 'itchyny/calendar.vim'
 "NeoBundle 'itchyny/lightline.vim'
+
+"NeoBundle 'itchyny/dictionary.vim'
 NeoBundle 'koron/nyancat-vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mattn/webapi-vim'

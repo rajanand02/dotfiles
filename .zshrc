@@ -1,10 +1,12 @@
 ZSH=$HOME/.oh-my-zsh
+source ~/.zsh/zsh-vcs-prompt/zshrc.sh
+export PATH=~/.meteor/tools/latest/bin:$PATH
+ZSH_VCS_PROMPT_ENABLE_CACHING='true'
+RPROMPT='$(vcs_super_info)'
 export EDITOR='vim'
-ZSH_THEME="gnzh"
+ZSH_THEME="raj"
 
 # my custom settings
-#alias tmux="TERM=screen-256color-bce tmux"
-#alias tmux="tmux -u"
 alias brb='sudo pm-hibernate'
 alias v="vim"
 alias bye='sudo poweroff'
@@ -12,8 +14,9 @@ alias re='sudo reboot'
 alias x='exit'
 alias ag='apt-get'
 alias install='sudo apt-get install'
-alias search='sudo apt-cache search'
 alias remove='sudo apt-get remove'
+alias search='sudo apt-cache search'
+alias update='sudo apt-get update'
 alias autoremove='sudo apt-get autoremove'
 alias purge='sudo apt-get purge'
 alias vrc='vim ~/.vimrc'
@@ -21,17 +24,41 @@ alias zrc='vim ~/.zshrc'
 alias ohmy='cd /home/raj/.oh-my-zsh && vim'
 alias sd='cap staging deploy'
 alias pd='cap production deploy'
+# rails projects
+alias ud='cd /home/raj/udproducts/'
+alias udn='cd /home/raj/udproducts/nthat/'
+alias vn='cd /home/raj/udproducts/nthat/ && vim'
 
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
-plugins=(debian history tmux tmuxinator git git-flow github github-flow bundler gem ruby rails3 rails4 rvm heroku terminator )
+
+alias udm='cd /home/raj/udproducts/IAABA/'
+
+alias udc='cd /home/raj/udproducts/gw-c4u/'
+alias vc='cd /home/raj/udproducts/gw-c4u/ && vim'
+
+alias udt='cd /home/raj/udproducts/solid_cube/'
+alias vt='cd /home/raj/udproducts/solid_cube/ && vim'
+
+alias udno='cd /home/raj/udproducts/notice/'
+alias vno='cd /home/raj/udproducts/notice/ && vim'
+
+alias udi='cd /home/raj/udproducts/insure/'
+alias vin='cd /home/raj/udproducts/insure/ && vim'
+
+alias vrc='vim ~/.vimrc'
+alias zrc='vim ~/.zshrc'
+alias ohmy='cd /home/raj/.oh-my-zsh && vim'
+
+alias sshmrt='ssh root@162.243.228.243'
+alias sshiaas='ssh ubuntu@192.241.129.33'
+alias sshiaap='ssh ubuntu@95.138.163.32'
+plugins=(bundler capistrano debian gem git git-flow github git-remote-branch gitignore heroku history rails rake rbenv ruby sudo terminator tmux tmuxinator )
 
 source $ZSH/oh-my-zsh.sh
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM 
-source ~/.zsh/zshrc.sh
 
-export PATH=$PATH:/usr/local/rvm/gems/ruby-2.0.0-p247/bin:/usr/local/rvm/gems/ruby-2.0.0-p247@global/bin:/usr/local/rvm/rubies/ruby-2.0.0-p247/bin:/usr/local/rvm/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/sbin:/usr/sbin:/usr/local/rvm/gems/ruby-2.0.0-p247/bin:/usr/local/rvm/gems/ruby-2.0.0-p247@global/bin:/usr/local/rvm/rubies/ruby-2.0.0-p247/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/rvm/gems/ruby-2.0.0-p247/bin:/usr/local/rvm/gems/ruby-2.0.0-p247@global/bin:/usr/local/rvm/rubies/ruby-2.0.0-p247/bin:/usr/local/rvm/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
