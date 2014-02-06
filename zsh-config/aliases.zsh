@@ -1,3 +1,4 @@
+source ~/dotfiles/zsh-config/ssh.zsh
 alias brb='cowsay "i will be waiting buddy" && sudo pm-hibernate'
 alias v="vim"
 alias bye='cowsay "Bye bye buddy" && sudo poweroff'
@@ -17,7 +18,6 @@ alias ohmy='cd /home/raj/.oh-my-zsh && vim'
 alias sd='cap staging deploy'
 alias pd='cap production deploy'
 # rails projects
-source /home/raj/dotfiles/ssh.zsh
 alias ud='cd /home/raj/udproducts/'
 alias udn='cd /home/raj/udproducts/nthat/'
 alias vn='cd /home/raj/udproducts/nthat/ && vim'

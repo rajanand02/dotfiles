@@ -1,6 +1,6 @@
 ZSH=$HOME/.oh-my-zsh
 source ~/.zsh/zsh-vcs-prompt/zshrc.sh
-source /home/raj/dotfiles/aliases.zsh
+source ~/dotfiles/zsh-config/aliases.zsh
 export PATH=~/.meteor/tools/latest/bin:$PATH
 ZSH_VCS_PROMPT_ENABLE_CACHING='true'
 RPROMPT='$(vcs_super_info)'
