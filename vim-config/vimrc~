@@ -1,5 +1,11 @@
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
 source ~/dotfiles/vim-config/bundles.vim
-source ~/dotfiles/vim-config/key-bindings.vim
 
 "setting goes here
 let mapleader=" "
@@ -34,7 +40,34 @@ set background=dark
 "let g:solarized_contrast="normal"
 "let g:solarized_visibility="normal"
 
+"key mappings to normal vim actions
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>q :q<CR>
+nnoremap Q :q!<CR>                             "avoid entering ex mode 
+nnoremap <leader>w :w<CR>
+nnoremap <leader>x :x<CR>
+nnoremap <leader>ev :e ~/.vimrc<CR>
+nnoremap <leader>so :so %<CR>
+nnoremap <leader>p :set paste! <CR>
+nnoremap <leader>s :%s/
+nnoremap <C-s> :w<CR>
+nnoremap <Leader>g gg=G<bar>gi<Esc>
+inoremap jk <Esc>
+vnoremap jk <Esc>
+nnoremap j gj
+nnoremap k gk
+nnoremap 0 g0
+nnoremap $ g$
+nnoremap > :tabnext<CR>
+nnoremap < :tabprevious<CR>
+nnoremap <Leader>te :tabe 
+nnoremap F :bnext<CR>
+nnoremap B :bprevious<CR>
 
+" Copy to 'clipboard registry'
+vmap <C-c> "+y
+nmap <C-a> ggVG
+vmap <C-x> dd
 
 "nnoremap <leader>bi :VimShellPop<CR>bundle install<CR>exit<CR>
 "nnoremap <leader>bi :!bundle install<CR>
@@ -64,6 +97,12 @@ nnoremap <leader>rm :Rmodel<space>
 nnoremap <leader>rs :Rstylesheet<space>
 nnoremap <leader>rj :Rjavascript<space>
 nnoremap <leader>ge :e Gemfile<CR>
+
+"map arrowkey to change viewports size
+nnoremap <Left> :vertical resize -5<CR>
+nnoremap <Right> :vertical resize +5<CR>
+nnoremap <Up> :resize -5<CR>
+nnoremap <Down> :resize +5<CR>
 
 
 " Unite
