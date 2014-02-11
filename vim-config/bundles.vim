@@ -6,7 +6,6 @@ endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
 "<---------------------Bundles--------------------->
-
 "shougo's plugins
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'

@@ -2,8 +2,8 @@ source ~/dotfiles/vim-config/bundles.vim
 source ~/dotfiles/vim-config/key-bindings.vim
 
 "setting goes here
-let mapleader=" "
 syntax on
+syntax enable
 set relativenumber
 filetype plugin indent on 
 set noswapfile

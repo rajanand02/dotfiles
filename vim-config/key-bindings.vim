@@ -1,3 +1,4 @@
+let mapleader=" "
 "key mappings to normal vim actions
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>q :q<CR>
