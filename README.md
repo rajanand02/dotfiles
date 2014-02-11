@@ -34,12 +34,7 @@ dotfiles
 ### Compile and install vim
 ```bash
 
-  ./configure --with-features=huge \
-    --enable-rubyinterp \
-    --enable-pythoninterp \
-    --enable-perlinterp \
-    --with-lua-prefix=/usr/local --enable-luainterp --with-luajit \
-    --enable-gui=gtk2 --enable-cscope --prefix=/usr
+  ./configure --with-features=huge --enable-luainterp --with-luajit --with-lua-prefix=/usr/local
 
 make VIMRUNTIMEDIR=/usr/share/vim/vim74
 sudo make install
