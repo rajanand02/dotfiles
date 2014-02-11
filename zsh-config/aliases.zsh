@@ -14,28 +14,27 @@ alias autoremove='sudo apt-get autoremove'
 alias purge='sudo apt-get purge'
 alias vrc='vim ~/dotfiles/vim-config/vimrc'
 alias zrc='vim ~/dotfiles/zsh-config/zshrc'
-alias ohmy='cd /home/raj/.oh-my-zsh && vim'
+alias ohmy='cd ~/.oh-my-zsh && vim'
 alias sd='cap staging deploy'
 alias pd='cap production deploy'
 # rails projects
-alias ud='cd /home/raj/udproducts/'
-alias udn='cd /home/raj/udproducts/nthat/'
-alias vn='cd /home/raj/udproducts/nthat/ && vim'
+alias ud='cd ~/udproducts/'
+alias udn='cd ~/udproducts/nthat/'
+alias vn='cd ~/udproducts/nthat/ && vim'
 
 
-alias udm='cd /home/raj/udproducts/IAABA/'
+alias udm='cd ~/udproducts/IAABA/'
 
-alias udc='cd /home/raj/udproducts/gw-c4u/'
-alias vc='cd /home/raj/udproducts/gw-c4u/ && vim'
+alias udc='cd ~/udproducts/gw-c4u/'
+alias vc='cd ~/udproducts/gw-c4u/ && vim'
 
-alias udt='cd /home/raj/udproducts/solid_cube/'
-alias vt='cd /home/raj/udproducts/solid_cube/ && vim'
+alias udt='cd ~/udproducts/solid_cube/'
+alias vt='cd ~/udproducts/solid_cube/ && vim'
 
-alias udno='cd /home/raj/udproducts/notice/'
-alias vno='cd /home/raj/udproducts/notice/ && vim'
+alias udno='cd ~/udproducts/notice/'
+alias vno='cd ~/udproducts/notice/ && vim'
 
-alias udi='cd /home/raj/udproducts/insure/'
-alias vin='cd /home/raj/udproducts/insure/ && vim'
-
-alias ohmy='cd /home/raj/.oh-my-zsh && vim'
+alias udi='cd ~/udproducts/insure/'
+alias vin='cd ~/udproducts/insure/ && vim'
+alias dot='cd ~/dotfiles/ && vim'
 
