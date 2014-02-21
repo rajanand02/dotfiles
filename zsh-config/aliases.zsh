@@ -14,7 +14,7 @@ alias autoremove='sudo apt-get autoremove'
 alias purge='sudo apt-get purge'
 alias vrc='vim ~/dotfiles/vim-config/vimrc'
 alias zrc='vim ~/dotfiles/zsh-config/zshrc'
-alias ohmy='cd ~/.oh-my-zsh && vim'
+alias ohmy='cd ~/dotfiles/oh-my-zsh && vim'
 alias sd='cap staging deploy'
 alias pd='cap production deploy'
 # rails projects
@@ -36,5 +36,6 @@ alias vno='cd ~/udproducts/notice/ && vim'
 
 alias udi='cd ~/udproducts/insure/'
 alias vin='cd ~/udproducts/insure/ && vim'
+alias udm='cd ~/udproducts/bi-meteor/ && vim'
 alias dot='cd ~/dotfiles/ && vim'
 

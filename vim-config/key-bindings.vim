@@ -34,4 +34,87 @@ nnoremap <Right> :vertical resize +5<CR>
 nnoremap <Up> :resize -5<CR>
 nnoremap <Down> :resize +5<CR>
 
+"nnoremap <leader>bi :VimShellPop<CR>bundle install<CR>exit<CR>
+"nnoremap <leader>bi :!bundle install<CR>
+"nnoremap <Leader>bi :Vim
+"nnoremap <leader>bi :call feedkeys("bundle install\<lt>CR>exit\<lt>CR>", "t")<Bar>VimShellPop<CR>
+nnoremap <leader>bi :call feedkeys("bundle install\<lt>CR>", "t")<Bar>VimShellPop<CR>
+"nnoremap <leader>bi :new<Bar>0r!bundle install<CR>
+
+"key mappings for plugins
+nnoremap <leader>ntt :NERDTreeTabsOpen<CR>
+nnoremap <leader>nt :NERDTree<CR>
+nnoremap <leader>nbi :NeoBundleInstall<CR>
+nnoremap <leader>np :Nyancat<CR>
+nnoremap <leader>fc :VimFilerCurrentDir<CR>
+nnoremap <leader>fb :VimFilerBufferDir<CR>
+nnoremap <leader>fi :VimFilerExplorer<CR>
+nnoremap <leader>vs :VimShellPop<CR>
+nnoremap <leader>vt :VimShellTab<CR>
+
+"Rails vim key-mappings
+nnoremap <leader>rr :e config/routes.rb<CR>
+nnoremap <leader>rv :Rview<space>
+nnoremap <leader>rc :Rcontroller<space>
+nnoremap <leader>rg :Rgenerate<space>
+nnoremap <leader>rx :Rextract<space>
+nnoremap <leader>rm :Rmodel<space>
+nnoremap <leader>rs :Rstylesheet<space>
+nnoremap <leader>rj :Rjavascript<space>
+nnoremap <leader>ge :e Gemfile<CR>
+
+" Unite
+nmap , [unite]
+nnoremap [unite] <nop>
+let g:unite_source_history_yank_enable = 1
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <silent> [unite]t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:! file_mru<cr>
+nnoremap <silent> [unite]vv :<C-u>Unite -start-insert -no-split -buffer-name=file_vcs file/vcs<CR>
+nnoremap <silent> [unite]f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
+nnoremap <silent> [unite]r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
+nnoremap <silent> [unite]op :<C-u>Unite -no-split -buffer-name=outline  -auto-preview outline<cr>
+nnoremap <silent> [unite]oo :<C-u>Unite -no-split -quick-match -buffer-name=outline  outline<cr>
+nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yank    history/yank<cr>
+nnoremap <silent> [unite]e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
+nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
+nnoremap <silent> [unite]ft :Unite file_rec/async -default-action=tabopen<cr>
+nnoremap <silent> [unite]fs :Unite file_rec/async -default-action=split<cr>
+nnoremap <silent> [unite]fv :Unite file_rec/async -default-action=vsplit<cr>
+nnoremap <silent> [unite]fp :Unite -no-split -buffer-name=files -default-action=preview file<cr>
+nnoremap <silent> [unite]fa :Unite -no-split -start-insert -auto-preview file_rec/async <cr>
+nnoremap <silent> [unite]fc :Unite file_rec/async<cr>
+let g:unite_source_rec_async_command = 'ack -f --nofilter'
+
+"Fugitive 
+nnoremap <silent> <leader>gs :Gstatus<CR>
+nnoremap <silent> <leader>ga :Git add -A<CR>
+nnoremap <silent> <leader>gd :Gdiff<CR>
+nnoremap <silent> <leader>gc :Gcommit<CR>
+nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>gr :Gremove<CR>
+
+" Select all text
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+runtime! macros/matchit.vim
+au BufNewFile,BufRead *.erb set filetype=eruby.html
+
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplete#close_popup()
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+      \ "\<Plug>(neosnippet_expand_or_jump)"
+      \: "\<TAB>"
 
