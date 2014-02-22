@@ -24,6 +24,7 @@ NeoBundle 'tpope/vim-surround.git'                 "autocomplete all brakets and
 NeoBundle 'tpope/vim-rake.git'
 NeoBundle 'tpope/vim-rails.git'
 NeoBundle 'tpope/vim-markdown.git'
+NeoBundle 'tpope/vim-dispatch'
 
 " All scrooloose plugins  
 NeoBundle "scrooloose/syntastic"                   "to highlight syntax
@@ -75,6 +76,10 @@ NeoBundle 'altercation/vim-colors-solarized.git'
 "NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'Zuckonit/vim-airline-tomato'
+NeoBundle 'edkolev/tmuxline.vim'
+"NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'mhinz/vim-signify'
+NeoBundle 'majutsushi/tagbar'
 NeoBundle 'gabrielelana/pomicons'
 NeoBundle 'FredKSchott/CoVim'
 NeoBundle 'itchyny/calendar.vim'

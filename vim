@@ -1,1 +1,0 @@
-/home/raj/.vim/

@@ -5,7 +5,8 @@ nnoremap <leader>q :q<CR>
 nnoremap Q :q!<CR>                             "avoid entering ex mode 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :x<CR>
-nnoremap <leader>ev :e ~/.vimrc<CR>
+nnoremap <leader>ev :e ~/dotfiles/vim-config/vimrc<CR>
+nnoremap <leader>ez :e ~/dotfiles/zsh-config/zshrc<CR>
 nnoremap <leader>so :so %<CR>
 nnoremap <leader>p :set paste! <CR>
 nnoremap <leader>s :%s/
@@ -53,15 +54,35 @@ nnoremap <leader>vs :VimShellPop<CR>
 nnoremap <leader>vt :VimShellTab<CR>
 
 "Rails vim key-mappings
-nnoremap <leader>rr :e config/routes.rb<CR>
+nnoremap <leader>rm :Rmodel<space>
 nnoremap <leader>rv :Rview<space>
 nnoremap <leader>rc :Rcontroller<space>
-nnoremap <leader>rg :Rgenerate<space>
 nnoremap <leader>rx :Rextract<space>
-nnoremap <leader>rm :Rmodel<space>
 nnoremap <leader>rs :Rstylesheet<space>
 nnoremap <leader>rj :Rjavascript<space>
+
 nnoremap <leader>ge :e Gemfile<CR>
+nnoremap <leader>rr :e config/routes.rb<CR>
+
+nnoremap <leader>rk :Rake<space>
+nnoremap <leader>rdm :Rake db:migrate<CR>
+nnoremap <leader>rdr :Rake db:rollback<CR>
+nnoremap <leader>rdd :Rake db:drop<CR>
+
+nnoremap <leader>rg :Rgenerate<space>
+nnoremap <leader>rgc :Rgenerate controller<space>
+nnoremap <leader>rgm :Rgenerate model<space>
+nnoremap <leader>rgd :Rgenerate migration<space>
+nnoremap <leader>rgs :Rgenerate scaffold<space>
+nnoremap <leader>rgt :Rgenerate task<space>
+nnoremap <leader>rgr :Rgenerate resource<space>
+
+nnoremap <leader>rdc :Rdestroy controller<space>
+nnoremap <leader>rdm :Rdestroy model<space>
+nnoremap <leader>rdd :Rdestroy migration<space>
+nnoremap <leader>rds :Rdestroy scaffold<space>
+nnoremap <leader>rdr :Rdestroy resource<space>
+nnoremap <leader>rdt :Rdestroy task<space>
 
 " Unite
 nmap , [unite]
@@ -93,6 +114,16 @@ nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gr :Gremove<CR>
+
+"Dispatch
+autocmd FileType ruby let b:dispatch = 'ruby %'
+autocmd FileType python let b:dispatch = 'python %'
+autocmd FileType javascript let b:dispatch = 'node %'
+nnoremap <leader>d :Dispatch<CR>
+nnoremap <space>d :Dispatch bundle exec rspec %<CR>
+nnoremap <leader>bc :Dispatch bundle check <CR>
+nnoremap <leader>bi :Dispatch bundle install<CR>
+
 
 " Select all text
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"

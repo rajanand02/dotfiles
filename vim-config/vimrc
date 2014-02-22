@@ -1,5 +1,4 @@
 source ~/dotfiles/vim-config/bundles.vim
-source ~/dotfiles/vim-config/key-bindings.vim
 "setting goes here
 syntax on
 syntax enable
@@ -35,6 +34,7 @@ let g:solarized_visibility="normal"
 
 
 
+source ~/dotfiles/vim-config/key-bindings.vim
 
 " For snippet_complete marker.
 if has('conceal')
@@ -57,41 +57,39 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-"let g:move_key_modifier = 'C'
-"let g:Powerline_symbols = 'fancy'
-"let g:lightline = {
-      "\ 'colorscheme': 'powerline',
-      "\ 'active': {
-      "\   'left': [ [ 'mode', 'paste' ],
-      "\             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-      "\ },
-      "\ 'component': {
-      "\   'readonly': '%{&readonly?"x":""}',
-      "\ },
-      "\ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-      "\ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
-      "\ }
-
-
-      "\ 'separator': { 'left': '', 'right': '' },
-      "\ 'subseparator': { 'left': '|', 'right': '|' }
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme= 'wombat'
+let g:airline_theme= 'badwolf'
 let g:airline#extensions#branch#enabled = 1
-  if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-  endif
-  let g:airline_symbols.branch = '😈'  
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.branch = '😈'  
 let g:airline#extensions#branch#empty_message = 'No branch'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#syntastic#enabled= 1
+let g:airline#extensions#unite#enable= 1
+let g:airline#extensions#tmuxline#enable= 1
+let g:airline#extensions#hunks#enable= 1
+let g:tmuxline_theme = 'vim_powerline'
+let g:tomato#interval = 60 * 60
+let g:tomato#remind = "☻"
+let g:tomato#restinfo = "☺"
+let g:gitgutter_enabled = 0
 
+"Signify"
+let g:signify_disable_by_default = 1
+let g:signify_mapping_toggle = '<leader>gt'
+let g:signify_mapping_next_hunk = '<leader>gj'
+let g:signify_mapping_prev_hunk = '<leader>gk'
+let g:signify_mapping_toggle_highlight = '<leader>gh'
 
 let g:cssColorVimDoNotMessMyUpdatetime = 1
 
 "Starify settings
 let g:startify_custom_footer =
-            \ map(split(system('tips | cowsay here comes the mighty weapon'), '\n'), '"   ". v:val') + ['']
+      \ map(split(system('tips | cowsay here comes the mighty weapon'), '\n'), '"   ". v:val') + ['']
 let g:startify_custom_header= [
       \ ' _      _   _                 _ _   ',
       \ '| |    | | ( )               | | | ',
@@ -166,3 +164,15 @@ let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
+
+if &term =~ '^screen'
+  " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
+  execute "set t_kP=\e[5;*~"
+  execute "set t_kN=\e[6;*~"
+
+  " Arrow keys http://unix.stackexchange.com/a/34723
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
+endif
