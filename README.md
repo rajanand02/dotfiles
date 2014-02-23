@@ -1,11 +1,14 @@
 dotfiles
 =========
-###Uninstall old vim
+###Uninstall old vim and install dependencies 
 ```bash
   sudo apt-get remove vim vim-runtime gvim 
   
   #On ubuntu  12.04.2 you have to remove these packages as well
   sudo apt-get remove vim-tiny vim-common vim-gui-common
+  
+  #build dependencies from repository
+  sudo apt-get build-dep vim
 ```
 ###Install lua-5
 ```bash
@@ -34,7 +37,18 @@ dotfiles
 ### Compile and install vim
 ```bash
 
-  ./configure --with-features=huge --enable-luainterp --with-luajit --with-lua-prefix=/usr/local
+  ./configure \
+    --enable-perlinterp=dynamic \
+    --enable-pythoninterp=dynamic \
+    --enable-rubyinterp=dynamic \
+    --enable-luainterp --with-luajit --with-lua-prefix=/usr/local \
+    --enable-cscope \
+    --enable-gui=auto \
+    --enable-gtk2-check \
+    --enable-gnome-check \
+    --with-features=huge \
+    --with-x \
+    --with-python-config-dir=/usr/lib/python2.7/config
 
 make VIMRUNTIMEDIR=/usr/share/vim/vim74
 sudo make install
