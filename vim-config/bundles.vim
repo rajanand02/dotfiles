@@ -101,7 +101,7 @@ NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 "new plugins have to explore
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'dhruvasagar/vim-table-mode'
-NeoBundle 'myusuf3/numbers.vim'
+"NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'tsukkee/unite-tag'

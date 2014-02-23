@@ -39,4 +39,5 @@ alias udi='cd ~/udproducts/insure/'
 alias vin='cd ~/udproducts/insure/ && vim'
 alias udm='cd ~/udproducts/bi-meteor/ && vim'
 alias dot='cd ~/dotfiles/ && vim'
+alias blog='cd ~/rails_practice/rajanand02.github.io/ && vim'
 

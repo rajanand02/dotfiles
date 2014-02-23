@@ -159,6 +159,7 @@ au Filetype css,javascript
 
 
 let g:multi_cursor_use_default_mapping=0
+let g:mustache_abbreviations = 1
 " Default mapping
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
