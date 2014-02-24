@@ -1,4 +1,4 @@
-dotfiles
+dotfiles [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rajanand02/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 =========
 ###Uninstall old vim and install dependencies 
 ```bash
@@ -58,3 +58,4 @@ sudo make install
 ```bash
   vim --version
 ```
+
