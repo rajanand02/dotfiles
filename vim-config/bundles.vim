@@ -27,18 +27,20 @@ NeoBundle 'tpope/vim-rails.git'
 NeoBundle 'tpope/vim-markdown.git'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-vinegar'
+NeoBundle 'tpope/vim-abolish'
+NeoBundle 'tpope/vim-rbenv'
 
 " All scrooloose plugins  
 NeoBundle "scrooloose/syntastic"                   "to highlight syntax
 NeoBundle 'scrooloose/nerdcommenter'               "to autocommenting based on file type
 NeoBundle "scrooloose/nerdtree"                    "classic file explorer
+NeoBundle "jistr/vim-nerdtree-tabs"                "must have plugin for nerdtree
 
 "NeoBundle 'gmarik/vundle'                         "replaced it with neobundle
 NeoBundle 'Lokaltog/vim-easymotion'                "make moving inside file real easy
 NeoBundle 'justinmk/vim-sneak'
 "NeoBundle "terryma/vim-multiple-cursors"           " Multiple cursor like sublime
 NeoBundle 'kris89/vim-multiple-cursors'
-NeoBundle "jistr/vim-nerdtree-tabs"                "must have plugin for nerdtree
 NeoBundle 'Raimondi/delimitMate'                   "Quotes autocomplete
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 NeoBundle 'junegunn/goyo.vim'                      "edit in without any distraction
@@ -55,7 +57,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'Keithbsmiley/rspec.vim'
 
 "Markdown
-NeoBundle 'nelstrom/vim-markdown-folding.git'
+NeoBundle 'nelstrom/vim-markdown-folding'
 
 NeoBundle 'Rip-Rip/clang_complete'
 NeoBundle "MarcWeber/vim-addon-mw-utils"

@@ -54,6 +54,21 @@ let g:neocomplete#force_overwrite_completefunc = 1
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+imap <C-i>     <Plug>(neosnippet_expand_or_jump)
+smap <C-i>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-i>     <Plug>(neosnippet_expand_target)
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+            \ "\<Plug>(neosnippet_expand_or_jump)"
+            \: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+            \ "\<Plug>(neosnippet_expand_or_jump)"
+            \: "\<TAB>"
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
 "Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -83,6 +98,7 @@ let g:tomato#restinfo = "☺"
 let g:gitgutter_enabled = 0
 
 "Signify"
+let g:signify_vcs_list = [ 'git' ]
 let g:signify_disable_by_default = 1
 let g:signify_mapping_toggle = '<leader>gt'
 let g:signify_mapping_next_hunk = '<leader>gj'
@@ -113,11 +129,11 @@ let g:startify_change_to_dir       = 0
 
 "Easy motion leader key-mapping
 let g:EasyMotion_leader_key = '<Leader><Leader>'
-
+let g:move_map_keys = 0
+let g:move_key_modifier = 'C'
 "Nerdtree settings
-autocmd VimEnter * NERDTree
-autocmd VimEnter * NERDTreeMirror
 autocmd VimEnter * NERDTreeTabsOpen 
+autocmd VimEnter * NERDTreeMirror
 autocmd VimEnter * wincmd p
 
 "vimfiler settings

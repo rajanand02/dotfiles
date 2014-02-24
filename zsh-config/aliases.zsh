@@ -17,6 +17,7 @@ alias vrc='~/dotfiles/ && vim vim-config/vimrc'
 alias ohmy='cd ~/dotfiles/oh-my-zsh && vim'
 alias sd='cap staging deploy'
 alias pd='cap production deploy'
+alias tmux="TERM=screen-256color-bce tmux -u"
 
 # rails projects
 alias ud='cd ~/udproducts/'
