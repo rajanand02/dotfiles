@@ -15,6 +15,7 @@ NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/unite-outline"
 NeoBundle 'Shougo/vimproc'
 NeoBundleFetch 'Shougo/neobundle.vim'              "Let NeoBundle manage NeoBundle
+NeoBundle 'Shougo/neomru.vim'
 
 "tpope's plugins
 NeoBundle 'tpope/vim-fugitive'                     "git inside vim
@@ -69,6 +70,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'ap/vim-css-color'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'honza/vim-snippets'                      "Snippets
+NeoBundle 'bonsaiben/bootstrap-snippets'            " Boottrap Snippets
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle "garbas/vim-snipmate"
 

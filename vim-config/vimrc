@@ -3,14 +3,18 @@ source ~/dotfiles/vim-config/bundles.vim
 syntax on
 syntax enable
 set relativenumber
-filetype plugin indent on 
+filetype plugin on
+filetype indent on 
 set noswapfile
 set incsearch
 set ignorecase
+set showmatch
 set history=1000
 set title
 set expandtab
+set smarttab
 set autoindent
+set smartindent
 set mouse=a
 set spell
 set cursorline
