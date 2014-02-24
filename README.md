@@ -58,3 +58,7 @@ sudo make install
 ```bash
   vim --version
 ```
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/rajanand02/dotfiles/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
