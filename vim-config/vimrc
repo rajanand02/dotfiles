@@ -3,12 +3,19 @@ source ~/dotfiles/vim-config/bundles.vim
 syntax on
 syntax enable
 set relativenumber
+set number
 filetype plugin on
 filetype indent on 
 set noswapfile
+
+"search settings
 set incsearch
 set ignorecase
 set showmatch
+set smartcase
+nnoremap <tab> %
+vnoremap <tab> %
+
 set history=1000
 set title
 set expandtab
@@ -130,8 +137,11 @@ let g:startify_change_to_dir       = 0
 "Easy motion leader key-mapping
 let g:EasyMotion_leader_key = '<Leader><Leader>'
 "Nerdtree settings
-autocmd VimEnter * NERDTreeTabsOpen 
-autocmd VimEnter * NERDTreeMirror
+let g:nerdtree_tabs_open_on_console_startup=1
+autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTreeMirror
+"autocmd VimEnter * NERDTreeMirrorOpen
+"autocmd VimEnter * NERDTreeTabsOpen
 autocmd VimEnter * wincmd p
 
 "vimfiler settings
@@ -154,6 +164,9 @@ let g:multi_cursor_next_key='<C-m>'
 
 
 "emmet zencoding
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<C-e>'
 let g:user_emmet_settings = {
       \  'php' : {
       \    'extends' : 'html',

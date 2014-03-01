@@ -1,5 +1,9 @@
 let mapleader=" "
 "key mappings to normal vim actions
+nnoremap / /\v
+vnoremap / /\v
+nnoremap ; :
+au FocusLost * :wa
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>q :q<CR>
 nnoremap Q :q!<CR>                             "avoid entering ex mode 
@@ -23,6 +27,10 @@ nnoremap < :tabprevious<CR>
 nnoremap <Leader>te :tabe 
 nnoremap F :bnext<CR>
 nnoremap B :bprevious<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Copy to 'clipboard registry'
 vmap <C-c> "+y
@@ -114,6 +122,7 @@ nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
 nnoremap <silent> <leader>gr :Gremove<CR>
+nnoremap <silent> <leader>gb :Gbrowse<CR>
 
 "Dispatch
 autocmd FileType ruby let b:dispatch = 'ruby %'
@@ -123,7 +132,6 @@ nnoremap <leader>d :Dispatch<CR>
 nnoremap <space>d :Dispatch bundle exec rspec %<CR>
 nnoremap <leader>bc :Dispatch bundle check <CR>
 nnoremap <leader>bi :Dispatch bundle install<CR>
-
 
 " Select all text
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
