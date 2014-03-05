@@ -37,6 +37,9 @@ vmap <C-c> "+y
 nmap <C-a> ggVG
 vmap <C-x> dd
 
+nnoremap <Leader>ut :UndotreeToggle<cr>
+nnoremap <Leader>tb :TagbarToggle<cr>
+
 "map arrowkey to change viewports size
 nnoremap <Left> :vertical resize -5<CR>
 nnoremap <Right> :vertical resize +5<CR>
@@ -121,8 +124,10 @@ nnoremap <silent> <leader>ga :Git add -A<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
+nnoremap <silent> <leader>gl :Git pull<CR>
 nnoremap <silent> <leader>gr :Gremove<CR>
 nnoremap <silent> <leader>gb :Gbrowse<CR>
+vnoremap <silent> <leader>gb :Gbrowse<CR>
 
 "Dispatch
 autocmd FileType ruby let b:dispatch = 'ruby %'

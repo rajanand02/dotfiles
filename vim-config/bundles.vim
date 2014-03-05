@@ -109,5 +109,5 @@ NeoBundle 'dhruvasagar/vim-table-mode'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'tsukkee/unite-tag'
-NeoBundle 'zhaocai/GoldenView.Vim'
+NeoBundle 'gcmt/wildfire.vim'
 NeoBundleCheck                                     "Installation check.
