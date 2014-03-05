@@ -113,8 +113,9 @@ let g:tmuxline_preset = {
       \'c'    : ['#(whoami)', '#(uptime  | cut -d " " -f 1,2,3)'],
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W', '#F'],
-      \'y'    : ['%r', '%a', '%Y'],
-      \'z'    : '#H'}
+      \'z'    : '#(rainbarf --battery --remaining --no-rgb)',
+      \'x'    : ['%r', '%a', '%Y'],
+      \'y'    : '#H'}
 
 "Signify"
 let g:signify_vcs_list = [ 'git' ]
