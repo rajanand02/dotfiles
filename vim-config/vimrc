@@ -96,13 +96,25 @@ let g:airline#extensions#branch#empty_message = 'No branch'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled= 1
 let g:airline#extensions#unite#enable= 1
-let g:airline#extensions#tmuxline#enable= 1
 let g:airline#extensions#hunks#enable= 1
+
+" tmux line configuration
+let g:airline#extensions#tmuxline#enable= 1
 let g:tmuxline_theme = 'vim_powerline'
 let g:tomato#interval = 60 * 60
 let g:tomato#remind = "☻"
 let g:tomato#restinfo = "☺"
 let g:gitgutter_enabled = 0
+
+" custom preset with shell commands
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'b'       : '#W',
+      \'c'    : ['#(whoami)', '#(uptime  | cut -d " " -f 1,2,3)'],
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W', '#F'],
+      \'y'    : ['%r', '%a', '%Y'],
+      \'z'    : '#H'}
 
 "Signify"
 let g:signify_vcs_list = [ 'git' ]
