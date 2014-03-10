@@ -21,9 +21,9 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'tpope/vim-fugitive'                     "git inside vim
 NeoBundle 'tpope/vim-repeat'                       "Helps to repeat previous command with . key
 NeoBundle 'tpope/vim-endwise.git'                  "To enable automatic end in loops
-NeoBundle 'tpope/vim-surround.git'                 "autocomplete all brakets and quotes
+NeoBundle 'tpope/vim-surround.git'                 "autocomplete and change/include tags, quotes,etc..
 NeoBundle 'tpope/vim-rake.git'
-NeoBundle 'tpope/vim-rails.git'
+NeoBundle 'tpope/vim-rails.git'                    "Make vim as Rails ide
 NeoBundle 'tpope/vim-markdown.git'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-vinegar'

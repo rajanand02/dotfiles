@@ -99,8 +99,21 @@ nnoremap <leader>rdt :Rdestroy task<space>
 nmap , [unite]
 nnoremap [unite] <nop>
 let g:unite_source_history_yank_enable = 1
-"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+call unite#set_profile('files', 'smartcase', 1)
+call unite#custom#source('line,outline','matchers','matcher_fuzzy')
+
+let g:unite_data_directory='~/.vim/.cache/unite'
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable=1
+let g:unite_source_rec_max_cache_files=5000
+let g:unite_prompt='» '
+
+let g:unite_source_rec_async_command = 'ack -f --nofilter'
 nnoremap <silent> [unite]t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:! file_mru<cr>
+nnoremap <silent> [unite]tt :Unite -start-insert -no-split tag <cr>
+nnoremap <silent> [unite]tf :Unite -start-insert -no-split tag/file <cr>
 nnoremap <silent> [unite]vv :<C-u>Unite -start-insert -no-split -buffer-name=file_vcs file/vcs<CR>
 nnoremap <silent> [unite]f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
 nnoremap <silent> [unite]r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
@@ -110,13 +123,12 @@ nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yank    history/yank<cr>
 nnoremap <silent> [unite]e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
 nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
 nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
+nnoremap <silent> [unite]fc :Unite file_rec/async<cr>
 nnoremap <silent> [unite]ft :Unite file_rec/async -default-action=tabopen<cr>
 nnoremap <silent> [unite]fs :Unite file_rec/async -default-action=split<cr>
 nnoremap <silent> [unite]fv :Unite file_rec/async -default-action=vsplit<cr>
 nnoremap <silent> [unite]fp :Unite -no-split -buffer-name=files -default-action=preview file<cr>
 nnoremap <silent> [unite]fa :Unite -no-split -start-insert -auto-preview file_rec/async <cr>
-nnoremap <silent> [unite]fc :Unite file_rec/async<cr>
-let g:unite_source_rec_async_command = 'ack -f --nofilter'
 
 "Fugitive 
 nnoremap <silent> <leader>gs :Gstatus<CR>
@@ -134,7 +146,7 @@ autocmd FileType ruby let b:dispatch = 'ruby %'
 autocmd FileType python let b:dispatch = 'python %'
 autocmd FileType javascript let b:dispatch = 'node %'
 nnoremap <leader>d :Dispatch<CR>
-nnoremap <space>d :Dispatch bundle exec rspec %<CR>
+nnoremap <leader>dr :Dispatch bundle exec rspec %<CR>
 nnoremap <leader>bc :Dispatch bundle check <CR>
 nnoremap <leader>bi :Dispatch bundle install<CR>
 
