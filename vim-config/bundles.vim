@@ -110,4 +110,5 @@ NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'gcmt/wildfire.vim'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundleCheck                                     "Installation check.

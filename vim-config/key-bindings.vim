@@ -4,6 +4,8 @@ nnoremap / /\v
 vnoremap / /\v
 nnoremap ; :
 au FocusLost * :wa
+nnoremap <tab> %
+vnoremap <tab> %
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>q :q<CR>
 nnoremap Q :q!<CR>                             "avoid entering ex mode 
@@ -129,6 +131,44 @@ nnoremap <silent> [unite]fs :Unite file_rec/async -default-action=split<cr>
 nnoremap <silent> [unite]fv :Unite file_rec/async -default-action=vsplit<cr>
 nnoremap <silent> [unite]fp :Unite -no-split -buffer-name=files -default-action=preview file<cr>
 nnoremap <silent> [unite]fa :Unite -no-split -start-insert -auto-preview file_rec/async <cr>
+let g:unite_source_menu_menus = {}
+let g:unite_source_menu_menus.git = {
+    \ 'description' : '            gestionar repositorios git
+        \                            ⌘ [espacio]g',
+    \}
+let g:unite_source_menu_menus.git.command_candidates = [
+    \['▷ tig                                                        ⌘ ,gt',
+        \'normal ,gt'],
+    \['▷ git status       (Fugitive)                                ⌘ ,gs',
+        \'Gstatus'],
+    \['▷ git diff         (Fugitive)                                ⌘ ,gd',
+        \'Gdiff'],
+    \['▷ git commit       (Fugitive)                                ⌘ ,gc',
+        \'Gcommit'],
+    \['▷ git log          (Gitv)                                    ⌘ ,gl',
+        \'Gitv'],
+    \['▷ git history      (Gitv)                                    ⌘ ,gh',
+        \'Gitv!'],
+    \['▷ git blame        (Fugitive)                                ⌘ ,gb',
+        \'Gblame'],
+    \['▷ git stage        (Fugitive)                                ⌘ ,gw',
+        \'Gwrite'],
+    \['▷ git checkout     (Fugitive)                                ⌘ ,go',
+        \'Gread'],
+    \['▷ git rm           (Fugitive)                                ⌘ ,gr',
+        \'Gremove'],
+    \['▷ git mv           (Fugitive)                                ⌘ ,gm',
+        \'exe "Git mv " input("destino: ")'],
+    \['▷ git push         (Fugitive, salida por buffer)             ⌘ ,gp',
+        \'Git! push'],
+    \['▷ git pull         (Fugitive, salida por buffer)             ⌘ ,gP',
+        \'Git! pull'],
+    \['▷ git prompt       (Fugitive, salida por buffer)             ⌘ ,gi',
+        \'exe "Git! " input("comando git: ")'],
+    \['▷ git cd           (Fugitive)',
+        \'Gcd'],
+    \]
+nnoremap <silent>[unite]g :Unite -silent -start-insert menu:git<CR>
 
 "Fugitive 
 nnoremap <silent> <leader>gs :Gstatus<CR>

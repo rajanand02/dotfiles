@@ -4,8 +4,10 @@ syntax on
 syntax enable
 set relativenumber
 set number
+
 filetype plugin on
 filetype indent on 
+
 set noswapfile
 
 "search settings
@@ -13,8 +15,6 @@ set incsearch
 set ignorecase
 set showmatch
 set smartcase
-nnoremap <tab> %
-vnoremap <tab> %
 
 set history=1000
 set title
@@ -22,6 +22,7 @@ set expandtab
 set smarttab
 set autoindent
 set smartindent
+
 set mouse=a
 set spell
 set cursorline
@@ -150,6 +151,7 @@ let g:startify_change_to_dir       = 0
 
 "Easy motion leader key-mapping
 let g:EasyMotion_leader_key = '<Leader><Leader>'
+
 "Nerdtree settings
 let g:nerdtree_tabs_open_on_console_startup=1
 autocmd VimEnter * NERDTree
