@@ -1,4 +1,6 @@
+" include bundles.vim
 source ~/dotfiles/vim-config/bundles.vim
+
 "setting goes here
 syntax on
 syntax enable
@@ -9,6 +11,7 @@ filetype plugin on
 filetype indent on 
 
 set noswapfile
+set title
 
 "search settings
 set incsearch
@@ -16,27 +19,35 @@ set ignorecase
 set showmatch
 set smartcase
 
-set history=1000
-set title
+" tab settings
 set expandtab
 set smarttab
 set autoindent
 set smartindent
+set tabstop=2 shiftwidth=2 softtabstop=2
 
+"system related settings
 set mouse=a
 set spell
 set cursorline
-set clipboard=unnamed
-set backspace=indent,eol,start " Make backspace behave normally.
+set history=1000
+set clipboard=unnamed     
+set backspace=indent,eol,start              " Make backspace behave normally.
+
+" wildmenu settings
 set wildmode=list:longest,full
 set wildmenu
-set tabstop=2 shiftwidth=2 softtabstop=2
+
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 set t_Co=256
+
+" undo settings
 set undodir=~/.vim/undodir
 set undofile
-set undolevels=1000 "maximum number of changes that can be undone
-set undoreload=10000 "maximum number lines to save
+set undolevels=1000                         "maximum number of changes that can be undone
+set undoreload=10000                        "maximum number lines to save
+
+" Color Scheme settings
 colorscheme solarized
 set background=dark
 let g:solarized_termtrans=1
@@ -45,8 +56,9 @@ let g:solarized_contrast="normal"
 let g:solarized_visibility="normal"
 
 
-
+"include key bindings
 source ~/dotfiles/vim-config/key-bindings.vim
+
 
 " For snippet_complete marker.
 if has('conceal')
@@ -59,6 +71,7 @@ let g:neocomplete#enable_smart_case = 1
 " Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neocomplete#force_overwrite_completefunc = 1
+
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
@@ -74,9 +87,11 @@ imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
       \ "\<Plug>(neosnippet_expand_or_jump)"
       \: "\<TAB>"
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
+
+"if has('conceal')
+  "set conceallevel=2 concealcursor=i
+"endif
+
 "Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -84,6 +99,7 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" airline configuration
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -99,8 +115,6 @@ let g:airline#extensions#syntastic#enabled= 1
 let g:airline#extensions#unite#enable= 1
 let g:airline#extensions#hunks#enable= 1
 let g:airline#extensions#tagbar#enable= 1
-
-" tmux line configuration
 let g:airline#extensions#tmuxline#enable= 1
 let g:tmuxline_theme = 'vim_powerline'
 let g:tomato#interval = 60 * 60
@@ -175,10 +189,6 @@ let g:syntastic_style_warning_symbol = '☢'
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_prompt =  '~~> '
 
-"mult cursor  plugin
-let g:multi_cursor_next_key='<C-m>'
-
-
 "emmet zencoding
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
@@ -205,8 +215,9 @@ au Filetype css,javascript
       \ let b:match_words = &matchpairs
 
 
-let g:multi_cursor_use_default_mapping=0
 let g:mustache_abbreviations = 1
+
+let g:multi_cursor_use_default_mapping=0
 " Default mapping
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'

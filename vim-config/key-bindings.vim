@@ -91,10 +91,10 @@ nnoremap <leader>rgt :Rgenerate task<space>
 nnoremap <leader>rgr :Rgenerate resource<space>
 
 nnoremap <leader>rdc :Rdestroy controller<space>
-nnoremap <leader>rdm :Rdestroy model<space>
+nnoremap <leader>rdmo :Rdestroy model<space>
 nnoremap <leader>rdd :Rdestroy migration<space>
 nnoremap <leader>rds :Rdestroy scaffold<space>
-nnoremap <leader>rdr :Rdestroy resource<space>
+nnoremap <leader>rdro :Rdestroy resource<space>
 nnoremap <leader>rdt :Rdestroy task<space>
 
 " Unite
