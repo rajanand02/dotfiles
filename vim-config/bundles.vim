@@ -9,6 +9,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 "shougo's plugins
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle "Shougo/unite.vim"

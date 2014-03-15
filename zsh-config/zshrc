@@ -6,7 +6,7 @@ ZSH_VCS_PROMPT_ENABLE_CACHING='true'
 RPROMPT='$(vcs_super_info)'
 export EDITOR='vim'
 ZSH_THEME="raj"
-fortune | cowsay
+#fortune | cowsay
 #COWDIR=/usr/share/cowsay/cows/; COWNUM=$(($RANDOM%$(ls $COWDIR | wc -l))); COWFILE=$(ls $COWDIR | sed -n ''$COWNUM'p'); fortune | cowsay -f $COWFILE
 # my custom settings
 plugins=(bundler capistrano debian gem git git-flow github git-remote-branch gitignore heroku history rails rake rbenv ruby sudo terminator )
