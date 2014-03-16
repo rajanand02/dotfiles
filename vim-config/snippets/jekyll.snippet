@@ -1,0 +1,39 @@
+snippet fig
+	<figure>
+		<img src ="${1:img}">
+	</figure>
+
+snippet figcap
+	<figure>
+		<img src ="${1:img}">
+		<figcaption>
+			<a href="${2:link}" title="">${3:text}<a>
+		</figcaption>
+	</figure>
+
+snippet figlinkcap
+	<figure>
+		<a href="${1:link}">
+			<img src ="${2:img}">
+		</a>
+		<figcaption>
+			<a href="${3:link}" title="">${4:text}<a>
+		</figcaption>
+	</figure>
+
+snippet figlink
+	<figure>
+		<a href="${1:link}">
+			<img src ="${2:img}">
+		</a>
+	</figure>
+
+snippet hbash
+	{% highlight bash%}
+		{${1:code}}
+	{% endhighlight%}
+
+snippet hruby
+	{% highlight ruby%}
+		{${1:code}}
+	{% endhighlight%}

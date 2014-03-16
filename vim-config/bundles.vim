@@ -45,6 +45,7 @@ NeoBundle 'kris89/vim-multiple-cursors'
 NeoBundle 'Raimondi/delimitMate'                   "Quotes autocomplete
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 NeoBundle 'junegunn/goyo.vim'                      "edit in without any distraction
+NeoBundle 'sickill/vim-pasta'
 
 "NeoBundle "spolu/dwm.vim"                         "Window Tile manager
 NeoBundle "mbbill/undotree"                        "Undo tree that help while undoing things

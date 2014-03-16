@@ -33,6 +33,7 @@ set cursorline
 set history=1000
 set clipboard=unnamed     
 set backspace=indent,eol,start              " Make backspace behave normally.
+set autowriteall
 
 " wildmenu settings
 set wildmode=list:longest,full
@@ -167,17 +168,17 @@ let g:startify_change_to_dir       = 0
 let g:EasyMotion_leader_key = '<Leader><Leader>'
 
 "Nerdtree settings
-let g:nerdtree_tabs_open_on_console_startup=1
-autocmd VimEnter * NERDTree
+"let g:nerdtree_tabs_open_on_console_startup=1
+"autocmd VimEnter * NERDTree
 "autocmd VimEnter * NERDTreeMirror
 "autocmd VimEnter * NERDTreeMirrorOpen
 "autocmd VimEnter * NERDTreeTabsOpen
-autocmd VimEnter * wincmd p
+"autocmd VimEnter * wincmd p
 
 "vimfiler settings
-"let g:vimfiler_as_default_explorer = 1
-"autocmd VimEnter * VimFilerExplorer
-"autocmd VimEnter * wincmd p
+let g:vimfiler_as_default_explorer = 1
+autocmd VimEnter * VimFilerExplorer
+autocmd VimEnter * wincmd p
 
 "Syntastic customization
 let g:syntastic_error_symbol = '✗'
