@@ -34,6 +34,7 @@ set history=1000
 set clipboard=unnamed     
 set backspace=indent,eol,start              " Make backspace behave normally.
 set autowriteall
+set visualbell
 
 " wildmenu settings
 set wildmode=list:longest,full
@@ -109,7 +110,6 @@ let g:airline#extensions#branch#enabled = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
-let g:airline_symbols.branch = '😈'  
 let g:airline#extensions#branch#empty_message = 'No branch'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#syntastic#enabled= 1
@@ -168,17 +168,17 @@ let g:startify_change_to_dir       = 0
 let g:EasyMotion_leader_key = '<Leader><Leader>'
 
 "Nerdtree settings
-"let g:nerdtree_tabs_open_on_console_startup=1
-"autocmd VimEnter * NERDTree
-"autocmd VimEnter * NERDTreeMirror
+let g:nerdtree_tabs_open_on_console_startup=1
+autocmd VimEnter * NERDTree
+autocmd VimEnter * NERDTreeMirror
 "autocmd VimEnter * NERDTreeMirrorOpen
 "autocmd VimEnter * NERDTreeTabsOpen
-"autocmd VimEnter * wincmd p
+autocmd VimEnter * wincmd p
 
 "vimfiler settings
-let g:vimfiler_as_default_explorer = 1
-autocmd VimEnter * VimFilerExplorer
-autocmd VimEnter * wincmd p
+"let g:vimfiler_as_default_explorer = 1
+"autocmd VimEnter * VimFilerExplorer
+"autocmd VimEnter * wincmd p
 
 "Syntastic customization
 let g:syntastic_error_symbol = '✗'

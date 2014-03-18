@@ -11,8 +11,8 @@ nnoremap <leader>q :q<CR>
 nnoremap Q :q!<CR>                             "avoid entering ex mode 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :x<CR>
-nnoremap <leader>ev :e ~/dotfiles/vim-config/vimrc<CR>
-nnoremap <leader>ez :e ~/dotfiles/zsh-config/zshrc<CR>
+nnoremap <leader>ev :tabe ~/dotfiles/vim-config/vimrc<CR>
+nnoremap <leader>ez :tabe ~/dotfiles/zsh-config/zshrc<CR>
 nnoremap <leader>so :so %<CR>
 nnoremap <leader>p :set paste! <CR>
 nnoremap <leader>s :%s/
@@ -52,7 +52,7 @@ nnoremap <Down> :resize +5<CR>
 "nnoremap <leader>bi :!bundle install<CR>
 "nnoremap <Leader>bi :Vim
 "nnoremap <leader>bi :call feedkeys("bundle install\<lt>CR>exit\<lt>CR>", "t")<Bar>VimShellPop<CR>
-nnoremap <leader>bi :call feedkeys("bundle install\<lt>CR>", "t")<Bar>VimShellPop<CR>
+"nnoremap <leader>bi :call feedkeys("bundle install\<lt>CR>", "t")<Bar>VimShellPop<CR>
 "nnoremap <leader>bi :new<Bar>0r!bundle install<CR>
 
 "key mappings for plugins
