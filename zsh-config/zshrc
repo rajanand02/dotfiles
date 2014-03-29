@@ -9,7 +9,7 @@ ZSH_THEME="raj"
 fortune | cowsay
 #COWDIR=/usr/share/cowsay/cows/; COWNUM=$(($RANDOM%$(ls $COWDIR | wc -l))); COWFILE=$(ls $COWDIR | sed -n ''$COWNUM'p'); fortune | cowsay -f $COWFILE
 # my custom settings
-plugins=(bundler capistrano debian gem git git-flow github git-remote-branch gitignore heroku history rails rake rbenv ruby sudo terminator )
+plugins=(tmux tmuxinator bundler capistrano debian gem git git-flow github git-remote-branch gitignore heroku history rails rake rbenv ruby sudo terminator rsync meteor battery)
 
 source $ZSH/oh-my-zsh.sh
 
