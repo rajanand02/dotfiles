@@ -71,6 +71,7 @@ nnoremap <leader>rm :Rmodel<space>
 nnoremap <leader>rv :Rview<space>
 nnoremap <leader>rc :Rcontroller<space>
 nnoremap <leader>rx :Rextract<space>
+vnoremap <leader>rx :Rextract<space>
 nnoremap <leader>rs :Rstylesheet<space>
 nnoremap <leader>rj :Rjavascript<space>
 
