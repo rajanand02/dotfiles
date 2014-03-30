@@ -168,7 +168,7 @@ let g:startify_change_to_dir       = 0
 let g:EasyMotion_leader_key = '<Leader><Leader>'
 
 "Nerdtree settings
-"let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup=1
 autocmd VimEnter * NERDTree
 autocmd VimEnter * NERDTreeMirror
 "autocmd VimEnter * NERDTreeMirrorOpen
