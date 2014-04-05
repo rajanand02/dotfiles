@@ -56,7 +56,7 @@ nnoremap <Down> :resize +5<CR>
 "nnoremap <leader>bi :new<Bar>0r!bundle install<CR>
 
 "key mappings for plugins
-nnoremap <leader>ntt :NERDTreeTabsOpen<CR>
+nnoremap <leader>n :NERDTreeTabsToggle<CR>
 nnoremap <leader>nt :NERDTree<CR>
 nnoremap <leader>nbi :NeoBundleInstall<CR>
 nnoremap <leader>np :Nyancat<CR>

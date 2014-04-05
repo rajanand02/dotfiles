@@ -9,7 +9,7 @@ alias re='cowsay "we will meet soon" && sudo reboot'
 alias v="vim"
 alias x='exit'
 alias m='cmatrix -s'
-alias tmux="TERM=screen-256color-bce tmux -u"
+#alias tmux="TERM=screen-256color-bce tmux -u"
 
 # show progress bar while cp mv
 alias cp='cp -gR'

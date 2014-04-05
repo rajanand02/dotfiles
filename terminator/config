@@ -26,9 +26,9 @@
     cursor_color = "#002b36"
     foreground_color = "#2fa615"
     background_color = "#eee8d5"
-  [[new]]
-    background_image = None
   [[solarized-light]]
+    background_image = None
+  [[new]]
     background_image = None
 [layouts]
   [[default]]
