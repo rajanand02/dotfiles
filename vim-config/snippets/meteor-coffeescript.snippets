@@ -1,0 +1,109 @@
+# collection
+snippet coll
+	${1:Collection}  = new Meteor.Collection "${2:collection}"
+
+# isClient block
+snippet isc
+	if Meteor.isClient
+		${1:isClient block}
+
+# isServer block
+snippet iss
+	if Meteor.isServer
+		${1:isServer block}
+
+# startup
+snippet start
+	if Meteor.startup ->
+		${1:startup block}
+
+# publication
+snippet pub
+	Meteor.publish "${1:pub-name}", ->
+		${2:collection}.find(${3:target})
+
+# subscription
+snippet sub
+	Meteor.subscribe "${1:sub}"
+
+# Template events
+snippet tle
+	Template.${1:Template}.events
+		"${2: action} ${3: on}": ->
+			${4: event-block}	
+
+# Template helper
+snippet tlh
+	Template.${1:Template}.${2:helper} ->
+		${3:block}
+
+# Template mulitiple helpers
+snippet tlhs
+	Template.${1:Template}.helpers ->
+		${2:name}: ->
+			${3: block-1}
+		${4:name}: ->
+			${5: block-2}
+
+# Template rendered
+snippet tlr
+	Template.${1:Template}.rendered ->
+		${2: block}
+
+# Deps.autorun
+snippet deps
+	Deps.autorun ->
+		${1:deps block}
+
+# Set Session
+snippet sset
+	Session.set "${1:key}", "${2:value}"
+
+# get Session
+snippet sget
+	Session.get "${1:key}", "${2:value}"
+
+# Meteor.methods
+snippet meth
+	Meteor.methods
+		${1:name}: (${2:arg1, arg2}) ->
+			${4: code}
+
+# Allow method
+snippet allow
+	${1:name}.allow
+		${2:target}
+
+# Deny method
+snippet deny
+	${1:name}.deny
+		${2:target}
+
+# Router.configure
+snippet rconfig
+	Router.configure
+	  layoutTemplate: '${1:MasterLayout}',
+	  loadingTemplate: '${2:Loading}',
+	  notFoundTemplate: '${3:NotFound}',
+
+# Router.map
+snippet rmap
+	Router.map ->
+		@route '${1:name}', path: '${2:path}'
+
+# single route
+snippet route
+	@route '${1:name}', path: '${2:path}'
+
+
+# register global helper
+snippet regh
+	Handlebars.registerHelper '${1:helper}', ->
+		${2:code}	
+
+# user nam only for accounts ui
+snippet aconfig
+	Accounts.ui.config
+		passwordSignupFields: 'USERNAME_ONLY'
+	
+
