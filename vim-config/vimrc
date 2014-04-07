@@ -76,7 +76,6 @@ let g:neocomplete#force_overwrite_completefunc = 1
 
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
-let g:neosnippet#snippets_directory='~/.vim/bundle/meteor-snippet'
 
 inoremap <expr><C-g>     neocomplete#undo_completion()
 inoremap <expr><C-l>     neocomplete#complete_common_string()
