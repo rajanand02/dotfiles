@@ -35,6 +35,8 @@ alias dot='cd ~/dotfiles/ && vim'
 alias sd='cap staging deploy'
 alias pd='cap production deploy'
 
+alias gaa='git add -A'
+alias gset='git remote set-url origin'
 # rails projects
 alias ud='cd ~/udproducts/'
 alias udn='cd ~/udproducts/nthat/'
