@@ -7,16 +7,16 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 
 "<---------------------Bundles--------------------->
 "shougo's plugins
-NeoBundle 'Shougo/neocomplete'
+"NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/vimfiler.vim'
-NeoBundle 'Shougo/vimshell.vim'
+"NeoBundle 'Shougo/vimfiler.vim'
+"NeoBundle 'Shougo/vimshell.vim'
 NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/unite-outline"
 NeoBundle 'Shougo/vimproc'
 NeoBundleFetch 'Shougo/neobundle.vim'              "Let NeoBundle manage NeoBundle
-NeoBundle 'Shougo/neomru.vim'
+"NeoBundle 'Shougo/neomru.vim'
 
 "tpope's plugins
 NeoBundle 'tpope/vim-fugitive'                     "git inside vim
@@ -27,8 +27,8 @@ NeoBundle 'tpope/vim-rake.git'
 NeoBundle 'tpope/vim-rails.git'                    "Make vim as Rails ide
 NeoBundle 'tpope/vim-markdown.git'
 NeoBundle 'tpope/vim-dispatch'
-NeoBundle 'tpope/vim-vinegar'
-NeoBundle 'tpope/vim-abolish'
+"NeoBundle 'tpope/vim-vinegar'
+"NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-rbenv'
 
 " All scrooloose plugins  
@@ -39,13 +39,13 @@ NeoBundle "jistr/vim-nerdtree-tabs"                "must have plugin for nerdtre
 
 "NeoBundle 'gmarik/vundle'                         "replaced it with neobundle
 NeoBundle 'Lokaltog/vim-easymotion'                "make moving inside file real easy
-NeoBundle 'justinmk/vim-sneak'
+"NeoBundle 'justinmk/vim-sneak'
 "NeoBundle "terryma/vim-multiple-cursors"           " Multiple cursor like sublime
-NeoBundle 'kris89/vim-multiple-cursors'
+"NeoBundle 'kris89/vim-multiple-cursors'
 NeoBundle 'Raimondi/delimitMate'                   "Quotes autocomplete
 NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-NeoBundle 'junegunn/goyo.vim'                      "edit in without any distraction
-NeoBundle 'sickill/vim-pasta'
+"NeoBundle 'junegunn/goyo.vim'                      "edit in without any distraction
+"NeoBundle 'sickill/vim-pasta'
 
 "NeoBundle "spolu/dwm.vim"                         "Window Tile manager
 NeoBundle "mbbill/undotree"                        "Undo tree that help while undoing things
@@ -81,7 +81,7 @@ NeoBundle "garbas/vim-snipmate"
 "colors to vim
 NeoBundle 'Rykka/colorv.vim'
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'dhruvasagar/vim-railscasts-theme'
+"NeoBundle 'dhruvasagar/vim-railscasts-theme'
 NeoBundle 'altercation/vim-colors-solarized.git'
 "NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'bling/vim-airline'
@@ -91,14 +91,14 @@ NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'gabrielelana/pomicons'
-NeoBundle 'FredKSchott/CoVim'
-NeoBundle 'itchyny/calendar.vim'
+"NeoBundle 'FredKSchott/CoVim'
+"NeoBundle 'itchyny/calendar.vim'
 "NeoBundle 'itchyny/lightline.vim'
 
 NeoBundle 'itchyny/dictionary.vim'
-NeoBundle 'koron/nyancat-vim'
+"NeoBundle 'koron/nyancat-vim'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'mattn/webapi-vim'
+"NeoBundle 'mattn/webapi-vim'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
@@ -110,7 +110,7 @@ NeoBundle 'dhruvasagar/vim-table-mode'
 "NeoBundle 'myusuf3/numbers.vim'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'gregsexton/gitv'
-NeoBundle 'tsukkee/unite-tag'
-NeoBundle 'gcmt/wildfire.vim'
+"NeoBundle 'tsukkee/unite-tag'
+"NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundleCheck                                     "Installation check.

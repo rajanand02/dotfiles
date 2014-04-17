@@ -12,9 +12,9 @@ alias m='cmatrix -s'
 #alias tmux="TERM=screen-256color-bce tmux -u"
 
 # show progress bar while cp mv
-alias cp='cp -gR'
-alias mv='mv -g'
-alias rm='rm -R'
+#alias cp='cp -gR'
+#alias mv='mv -g'
+#alias rm='rm -R'
 
 # debian commands
 alias ag='apt-get'
