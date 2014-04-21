@@ -113,4 +113,6 @@ NeoBundle 'gregsexton/gitv'
 NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'kien/ctrlp.vim'
+" tern
+NeoBundle 'marijnh/tern_for_vim'
 NeoBundleCheck                                     "Installation check.
