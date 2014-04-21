@@ -50,9 +50,6 @@ fancy_echo "Updating system packages ..."
 ### end linux-components/debian-package-update
 
 fancy_echo "Installing git, for source control management ..."
-  sudo apptitude install -y terminator
-
-fancy_echo "Installing git, for source control management ..."
   sudo aptitude install -y git
 
 fancy_echo "Installing base ruby build dependencies ..."
