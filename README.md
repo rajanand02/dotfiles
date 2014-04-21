@@ -59,3 +59,22 @@ sudo make install
   vim --version
 ```
 
+### if it is server, use server branch
+```
+  git checkout server
+```
+
+### create symlinks
+```
+  ln -s ~/dotfiles/vim-config/vimrc ~/.vimrc
+  ln -s ~/dotfiles/zsh-config/zshrc ~/.zshrc
+  ln -s ~/dotfiles/zsh/raj.zsh-theme ~/.oh-my-zsh/themes/raj.zsh-theme
+  ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
+  ln -s ~/dotfiles/terminator/config ~/.config/terminator/config
+```
+### Thoughbot laptop custom script
+```
+  cp ~/dotfiles/laptop.local ~/.laptop.local
+  chmod a+x ~/dotfiles/thoughbot_laptop
+  sh ~/dotfiles/thoughtbot_laptop
+```
