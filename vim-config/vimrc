@@ -53,9 +53,9 @@ set undoreload=10000                        "maximum number lines to save
 colorscheme solarized
 set background=dark
 let g:solarized_termtrans=1
-let g:solarized_termcolors=16
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
+"let g:solarized_termcolors=16
+"let g:solarized_contrast="normal"
+"let g:solarized_visibility="normal"
 
 
 "include key bindings

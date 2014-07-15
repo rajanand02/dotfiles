@@ -12,9 +12,9 @@ alias m='cmatrix -s'
 #alias tmux="TERM=screen-256color-bce tmux -u"
 
 # show progress bar while cp mv
-alias cp='cp -gR'
-alias mv='mv -g'
-alias rm='rm -R'
+#alias cp='cp -gR'
+#alias mv='mv -g'
+#alias rm='rm -R'
 
 # debian commands
 alias ag='apt-get'
@@ -35,27 +35,9 @@ alias dot='cd ~/dotfiles/ && vim'
 alias sd='cap staging deploy'
 alias pd='cap production deploy'
 
+#git
 alias gaa='git add -A'
 alias gset='git remote set-url origin'
-# rails projects
-alias ud='cd ~/udproducts/'
-alias udn='cd ~/udproducts/nthat/'
-alias vn='cd ~/udproducts/nthat/ && vim'
-
-alias udm='cd ~/udproducts/IAABA/'
-
-alias udc='cd ~/udproducts/gw-c4u/'
-alias vc='cd ~/udproducts/gw-c4u/ && vim'
-
-alias udt='cd ~/udproducts/solid_cube/'
-alias vt='cd ~/udproducts/solid_cube/ && vim'
-
-alias udno='cd ~/udproducts/notice/'
-alias vno='cd ~/udproducts/notice/ && vim'
-
-alias udi='cd ~/udproducts/insure/'
-alias vin='cd ~/udproducts/insure/ && vim'
-alias udm='cd ~/udproducts/bi-meteor/ && vim'
 
 # kill all tmux session
 alias alias kts='tmux ls | awk '\''{print $1}'\'' | sed '\''s/://g'\'' | xargs -I{} tmux kill-session -t {}'

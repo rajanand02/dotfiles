@@ -77,6 +77,7 @@ NeoBundle 'honza/vim-snippets'                      "Snippets
 NeoBundle 'bonsaiben/bootstrap-snippets'            " Boottrap Snippets
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle "garbas/vim-snipmate"
+NeoBundle "gregsexton/MatchTag"
 
 "colors to vim
 NeoBundle 'Rykka/colorv.vim'
