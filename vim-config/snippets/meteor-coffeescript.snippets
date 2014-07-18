@@ -20,7 +20,7 @@ snippet start
 # publication
 snippet pub
 	Meteor.publish "${1:pub-name}", ->
-		${2:collection}.find(${3:target})
+	  ${2:collection}.find(${3:target})
 
 # subscription
 snippet sub
@@ -29,8 +29,8 @@ snippet sub
 # Template events
 snippet tle
 	Template.${1:Template}.events
-		"${2: action} ${3: on}": ->
-			${4: event-block}	
+	  "${2: action} ${3: on}": ->
+	     ${4: event-block}	
 
 # Template helper
 snippet tlh
@@ -40,20 +40,20 @@ snippet tlh
 # Template mulitiple helpers
 snippet tlhs
 	Template.${1:Template}.helpers ->
-		${2:name}: ->
-			${3: block-1}
-		${4:name}: ->
-			${5: block-2}
+	  ${2:name}: ->
+		${3: block-1}
+	  ${4:name}: ->
+		${5: block-2}
 
 # Template rendered
 snippet tlr
 	Template.${1:Template}.rendered ->
-		${2: block}
+	  ${2: block}
 
 # Deps.autorun
 snippet deps
 	Deps.autorun ->
-		${1:deps block}
+	  ${1:deps block}
 
 # Set Session
 snippet sset
@@ -66,18 +66,18 @@ snippet sget
 # Meteor.methods
 snippet meth
 	Meteor.methods
-		${1:name}: (${2:arg1, arg2}) ->
-			${4: code}
+	  ${1:name}: (${2:arg1, arg2}) ->
+		${4: code}
 
 # Allow method
 snippet allow
 	${1:name}.allow
-		${2:target}
+	  ${2:target}
 
 # Deny method
 snippet deny
 	${1:name}.deny
-		${2:target}
+	  ${2:target}
 
 # Router.configure
 snippet rconfig
@@ -89,21 +89,31 @@ snippet rconfig
 # Router.map
 snippet rmap
 	Router.map ->
-		@route '${1:name}', path: '${2:path}'
+	  @route '${1:name}', path: '${2:path}'
+
+# Router go
+snippet rgo
+	Router.go "${1:path}"
 
 # single route
 snippet route
-	@route '${1:name}', path: '${2:path}'
+	@route '${1:name}', 
+	  path: '${2:path}'
+	  template: '${3:template}'
+# single route with controller
 
+snippet rcon
+	@route '${1:name}', 
+	  path: '${2:path}'
+	  template: '${3:template}'
+	  controller: ${4:controller}
 
 # register global helper
 snippet regh
 	Handlebars.registerHelper '${1:helper}', ->
-		${2:code}	
+	  ${2:code}	
 
 # user name only for accounts ui
 snippet aconfig
 	Accounts.ui.config
-		passwordSignupFields: 'USERNAME_ONLY'
-	
-
+	  passwordSignupFields: 'USERNAME_ONLY'
