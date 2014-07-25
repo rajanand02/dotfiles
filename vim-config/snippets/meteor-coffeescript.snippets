@@ -34,12 +34,12 @@ snippet tle
 
 # Template helper
 snippet tlh
-	Template.${1:Template}.${2:helper} ->
+	Template.${1:Template}.${2:helper}= ->
 	  ${3:block}
 
 # Template mulitiple helpers
 snippet tlhs
-	Template.${1:Template}.helpers ->
+	Template.${1:Template}.helpers
 	  ${2:name}: ->
 		${3: block-1}
 	  ${4:name}: ->
@@ -47,7 +47,7 @@ snippet tlhs
 
 # Template rendered
 snippet tlr
-	Template.${1:Template}.rendered ->
+	Template.${1:Template}.rendered= ->
 	  ${2: block}
 
 # Deps.autorun
@@ -61,7 +61,7 @@ snippet sset
 
 # get Session
 snippet sget
-	Session.get "${1:key}", "${2:value}"
+	Session.get "${1:key}"
 
 # Meteor.methods
 snippet meth
@@ -110,8 +110,8 @@ snippet rcon
 
 # register global helper
 snippet regh
-	Handlebars.registerHelper '${1:helper}', ->
-	  ${2:code}	
+	UI.registerHelper "${1}", ("${2}") ->
+	  ${3:code}	
 
 # user name only for accounts ui
 snippet aconfig

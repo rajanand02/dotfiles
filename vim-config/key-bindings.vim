@@ -43,10 +43,10 @@ nnoremap <Leader>ut :UndotreeToggle<cr>
 nnoremap <Leader>tb :TagbarToggle<cr>
 
 "map arrowkey to change viewports size
-nnoremap <Left> :vertical resize -5<CR>
-nnoremap <Right> :vertical resize +5<CR>
-nnoremap <Up> :resize -5<CR>
-nnoremap <Down> :resize +5<CR>
+"nnoremap <Left> :vertical resize -5<CR>
+"nnoremap <Right> :vertical resize +5<CR>
+"nnoremap <Up> :resize -5<CR>
+"nnoremap <Down> :resize +5<CR>
 
 "nnoremap <leader>bi :VimShellPop<CR>bundle install<CR>exit<CR>
 "nnoremap <leader>bi :!bundle install<CR>
@@ -190,7 +190,7 @@ nnoremap <leader>d :Dispatch<CR>
 nnoremap <leader>dr :Dispatch bundle exec rspec %<CR>
 nnoremap <leader>bc :Dispatch bundle check <CR>
 nnoremap <leader>bi :Dispatch bundle install<CR>
-
+autocmd BufWinEnter * setlocal modifiable
 " Select all text
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 runtime! macros/matchit.vim

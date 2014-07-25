@@ -82,8 +82,8 @@ NeoBundle "gregsexton/MatchTag"
 "colors to vim
 NeoBundle 'Rykka/colorv.vim'
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'dhruvasagar/vim-railscasts-theme'
-NeoBundle 'altercation/vim-colors-solarized.git'
+"NeoBundle 'dhruvasagar/vim-railscasts-theme'
+"NeoBundle 'altercation/vim-colors-solarized.git'
 "NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'Zuckonit/vim-airline-tomato'
@@ -103,7 +103,6 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
-"NeoBundle 'majutsushi/tagbar'
 
 "new plugins have to explore
 NeoBundle 'junegunn/vim-easy-align'
@@ -114,6 +113,20 @@ NeoBundle 'gregsexton/gitv'
 NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'gcmt/wildfire.vim'
 NeoBundle 'kien/ctrlp.vim'
+"NeoBundle 'saihoooooooo/glowshi-ft.vim'
+
 " tern
 NeoBundle 'marijnh/tern_for_vim'
+
+"new plugins for node,coffee,js,scss etc
+NeoBundle 'moll/vim-node'
+NeoBundle 'lukaszkorecki/CoffeeTags'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'tpope/vim-ragtag'
+"NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'jelera/vim-javascript-syntax'
+"NeoBundle 'hail2u/vim-css3-syntax'
+
 NeoBundleCheck                                     "Installation check.
