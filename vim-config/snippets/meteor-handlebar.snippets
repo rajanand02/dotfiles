@@ -1,0 +1,28 @@
+snippet tmp
+   <template name = "${1:name}">
+   </template>
+
+snippet #if
+	{{#if ${1}}}	
+	  ${2}
+	{{/if}}
+
+snippet #ife
+	{{#if ${1}}}	
+	  ${2}
+	  {{else}}
+	  ${3}
+	{{/if}}
+
+snippet >tmp
+	{{> ${1}}}
+
+snippet #each
+	{{#each ${1}}}	
+	  ${2}
+	{{/each}}
+
+snippet #with
+	{{#with ${1}}}	
+	  ${2}
+	{{/with}}
