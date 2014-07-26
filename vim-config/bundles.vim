@@ -119,14 +119,16 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'marijnh/tern_for_vim'
 
 "new plugins for node,coffee,js,scss etc
-NeoBundle 'moll/vim-node'
 NeoBundle 'lukaszkorecki/CoffeeTags'
+NeoBundle 'moll/vim-node'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'junegunn/vim-easy-align'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'tpope/vim-ragtag'
 "NeoBundle 'cakebaker/scss-syntax.vim'
-NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'dsawardekar/portkey'
+NeoBundle 'tommcdo/vim-exchange'
+NeoBundle 'wellle/targets.vim'
 "NeoBundle 'hail2u/vim-css3-syntax'
-
 NeoBundleCheck                                     "Installation check.

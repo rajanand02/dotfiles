@@ -29,6 +29,7 @@ nnoremap < :tabprevious<CR>
 nnoremap <Leader>te :tabe 
 nnoremap F :bnext<CR>
 nnoremap B :bprevious<CR>
+let g:move_key_modifier = 'S'
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -41,6 +42,7 @@ vmap <C-x> dd
 
 nnoremap <Leader>ut :UndotreeToggle<cr>
 nnoremap <Leader>tb :TagbarToggle<cr>
+nnoremap <F8> :TagbarToggle<CR>
 
 "map arrowkey to change viewports size
 "nnoremap <Left> :vertical resize -5<CR>

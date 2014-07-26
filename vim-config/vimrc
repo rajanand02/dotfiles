@@ -23,8 +23,12 @@ set smartcase
 set expandtab
 set smarttab
 set autoindent
-set smartindent
+set copyindent
+set shiftround
 set tabstop=2 shiftwidth=2 softtabstop=2
+set foldmethod=indent
+set smartindent
+set foldlevel=99
 
 "system related settings
 set mouse=a
@@ -61,11 +65,12 @@ set background=dark
 "include key bindings
 source ~/dotfiles/vim-config/key-bindings.vim
 
-
 " For snippet_complete marker.
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+"Break a line into two and retain cursor position from vysakh
+nmap <leader>b i<cr><esc>k$
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
@@ -120,7 +125,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme= 'badwolf'
+let g:airline_theme= 'murmur'
 let g:airline#extensions#branch#enabled = 1
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
@@ -267,3 +272,8 @@ augroup VimCSS3Syntax
   autocmd FileType css setlocal iskeyword+=-
 augroup END
 let g:vim_markdown_folding_disabled=1
+let g:CoffeeAutoDisabled= 0         " Disables autotaging on save (Default: 0 [false]
+"let g:CoffeeAutoTagFile=<filename>       " Name of the generated tag file (Default: ./tags)
+let g:CoffeeAutoTagIncludeVars= 1  " Includes variables (Default: 0 [false])
+let g:CoffeeAutoTagTagRelative= 1  " Sets file names to the relative path from the tag file location to the tag file location (Default: 1 [true])
+let g:mustache_abbreviations = 1
