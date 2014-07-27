@@ -71,7 +71,6 @@ NeoBundle 'Yggdroot/indentLine'
 
 "For html css javascript and coffeescript
 NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'ap/vim-css-color'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'honza/vim-snippets'                      "Snippets
 NeoBundle 'bonsaiben/bootstrap-snippets'            " Boottrap Snippets
@@ -131,4 +130,6 @@ NeoBundle 'dsawardekar/portkey'
 NeoBundle 'tommcdo/vim-exchange'
 NeoBundle 'wellle/targets.vim'
 "NeoBundle 'hail2u/vim-css3-syntax'
+"NeoBundle 'ap/vim-css-color'
+NeoBundle 'gorodinskiy/vim-coloresque.git'
 NeoBundleCheck                                     "Installation check.

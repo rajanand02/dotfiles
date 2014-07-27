@@ -21,4 +21,5 @@ fpath=(~/.zsh-completions/src $fpath)
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
+# prevents accidental ctrl-s 
+stty -ixon

@@ -29,7 +29,6 @@ nnoremap < :tabprevious<CR>
 nnoremap <Leader>te :tabe 
 nnoremap F :bnext<CR>
 nnoremap B :bprevious<CR>
-let g:move_key_modifier = 'S'
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -58,6 +57,9 @@ nnoremap <F8> :TagbarToggle<CR>
 "nnoremap <leader>bi :new<Bar>0r!bundle install<CR>
 
 "key mappings for plugins
+
+let g:move_key_modifier = 'S'
+
 nnoremap <leader>n :NERDTreeTabsToggle<CR>
 nnoremap <leader>nt :NERDTree<CR>
 nnoremap <leader>nbi :NeoBundleInstall<CR>
