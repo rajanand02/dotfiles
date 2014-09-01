@@ -6,6 +6,7 @@ nnoremap ; :
 au FocusLost * :wa
 nnoremap <tab> %
 vnoremap <tab> %
+nnoremap <leader>qt :tabonly<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>q :q<CR>
 nnoremap Q :q!<CR>                             "avoid entering ex mode 

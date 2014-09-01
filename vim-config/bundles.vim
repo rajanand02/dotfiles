@@ -30,6 +30,7 @@ NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-rbenv'
+NeoBundle 'tpope/vim-obsession'
 
 " All scrooloose plugins  
 NeoBundle "scrooloose/syntastic"                   "to highlight syntax
@@ -132,4 +133,5 @@ NeoBundle 'wellle/targets.vim'
 "NeoBundle 'hail2u/vim-css3-syntax'
 "NeoBundle 'ap/vim-css-color'
 NeoBundle 'gorodinskiy/vim-coloresque.git'
+NeoBundle 'mileszs/ack.vim'
 NeoBundleCheck                                     "Installation check.

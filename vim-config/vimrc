@@ -277,3 +277,8 @@ let g:CoffeeAutoDisabled= 0         " Disables autotaging on save (Default: 0 [f
 let g:CoffeeAutoTagIncludeVars= 1  " Includes variables (Default: 0 [false])
 let g:CoffeeAutoTagTagRelative= 1  " Sets file names to the relative path from the tag file location to the tag file location (Default: 1 [true])
 let g:mustache_abbreviations = 1
+if has("autocmd")
+  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+endif
