@@ -23,3 +23,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 # prevents accidental ctrl-s 
 stty -ixon
+
+export NVM_DIR="/home/raj/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
