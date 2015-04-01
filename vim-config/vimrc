@@ -1,5 +1,13 @@
-" include bundles.vim
+" 
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'              "Let NeoBundle manage NeoBundle
 source ~/dotfiles/vim-config/bundles.vim
+call neobundle#end()
 
 "setting goes here
 syntax on
@@ -177,7 +185,7 @@ let g:startify_custom_header= [
       \ '',
       \ '',
       \ ]
-let g:startify_files_number        = 10
+"let g:startify_files_number        = 10
 let g:startify_session_persistence = 1
 let g:startify_session_autoload    = 1
 let g:startify_enable_special      = 0
@@ -282,3 +290,13 @@ if has("autocmd")
   au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
   au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
 endif
+"emmet add online in html and css
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+
+set viminfo='100,n$HOME/.vim/files/info/viminfo

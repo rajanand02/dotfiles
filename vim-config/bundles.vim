@@ -1,9 +1,3 @@
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
 
 "<---------------------Bundles--------------------->
 "shougo's plugins
@@ -15,7 +9,6 @@ NeoBundle 'Shougo/vimshell.vim'
 NeoBundle "Shougo/unite.vim"
 NeoBundle "Shougo/unite-outline"
 NeoBundle 'Shougo/vimproc'
-NeoBundleFetch 'Shougo/neobundle.vim'              "Let NeoBundle manage NeoBundle
 NeoBundle 'Shougo/neomru.vim'
 
 "tpope's plugins
@@ -23,8 +16,8 @@ NeoBundle 'tpope/vim-fugitive'                     "git inside vim
 NeoBundle 'tpope/vim-repeat'                       "Helps to repeat previous command with . key
 NeoBundle 'tpope/vim-endwise.git'                  "To enable automatic end in loops
 NeoBundle 'tpope/vim-surround.git'                 "autocomplete and change/include tags, quotes,etc..
-NeoBundle 'tpope/vim-rake.git'
-NeoBundle 'tpope/vim-rails.git'                    "Make vim as Rails ide
+"NeoBundle 'tpope/vim-rake.git'
+"NeoBundle 'tpope/vim-rails.git'                    "Make vim as Rails ide
 NeoBundle 'tpope/vim-markdown.git'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-vinegar'
@@ -56,8 +49,8 @@ NeoBundle 'christoomey/vim-tmux-navigator'         "to navigate between tmux win
 NeoBundle 'chriskempson/base16-vim'                "Colors to vim
 NeoBundle 'matze/vim-move'                         "<A-k>   Move current line/selection up,  <A-j>   Move current line/selection down
 
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'Keithbsmiley/rspec.vim'
+"NeoBundle 'vim-ruby/vim-ruby'
+"NeoBundle 'Keithbsmiley/rspec.vim'
 
 "Markdown
 NeoBundle 'nelstrom/vim-markdown-folding'
@@ -99,7 +92,7 @@ NeoBundle 'itchyny/calendar.vim'
 NeoBundle 'itchyny/dictionary.vim'
 NeoBundle 'koron/nyancat-vim'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'mattn/webapi-vim'
+"NeoBundle 'mattn/webapi-vim'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
@@ -121,11 +114,10 @@ NeoBundle 'marijnh/tern_for_vim'
 "new plugins for node,coffee,js,scss etc
 NeoBundle 'lukaszkorecki/CoffeeTags'
 NeoBundle 'moll/vim-node'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'junegunn/vim-easy-align'
+"NeoBundle 'tpope/vim-haml'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'tpope/vim-ragtag'
-"NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'cakebaker/scss-syntax.vim'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 NeoBundle 'dsawardekar/portkey'
 NeoBundle 'tommcdo/vim-exchange'
@@ -134,4 +126,10 @@ NeoBundle 'wellle/targets.vim'
 "NeoBundle 'ap/vim-css-color'
 NeoBundle 'gorodinskiy/vim-coloresque.git'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'cmather/vim-meteor-snippets'
+"NeoBundle 'whatyouhide/vim-gotham'
+NeoBundle 'ryanss/vim-hackernews'
+NeoBundle 'shime/vim-livedown'
+
+NeoBundle 'walm/jshint.vim'
 NeoBundleCheck                                     "Installation check.

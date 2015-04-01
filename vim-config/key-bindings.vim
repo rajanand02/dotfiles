@@ -27,6 +27,8 @@ nnoremap 0 g0
 nnoremap $ g$
 nnoremap > :tabnext<CR>
 nnoremap < :tabprevious<CR>
+vmap <Tab> >
+vmap <S-Tab> <
 nnoremap <Leader>te :tabe 
 nnoremap F :bnext<CR>
 nnoremap B :bprevious<CR>
@@ -45,10 +47,10 @@ nnoremap <Leader>tb :TagbarToggle<cr>
 nnoremap <F8> :TagbarToggle<CR>
 
 "map arrowkey to change viewports size
-"nnoremap <Left> :vertical resize -5<CR>
-"nnoremap <Right> :vertical resize +5<CR>
-"nnoremap <Up> :resize -5<CR>
-"nnoremap <Down> :resize +5<CR>
+nnoremap <Left> :vertical resize -5<CR>
+nnoremap <Right> :vertical resize +5<CR>
+nnoremap <Up> :resize -5<CR>
+nnoremap <Down> :resize +5<CR>
 
 "nnoremap <leader>bi :VimShellPop<CR>bundle install<CR>exit<CR>
 "nnoremap <leader>bi :!bundle install<CR>
@@ -109,7 +111,7 @@ nnoremap [unite] <nop>
 let g:unite_source_history_yank_enable = 1
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#set_profile('files', 'smartcase', 1)
+call unite#set_profile('files', 'context.smartcase', 1)
 call unite#custom#source('line,outline','matchers','matcher_fuzzy')
 
 let g:unite_data_directory='~/.vim/.cache/unite'
@@ -167,7 +169,7 @@ let g:unite_source_menu_menus.git.command_candidates = [
         \'exe "Git mv " input("destino: ")'],
     \['▷ git push         (Fugitive, salida por buffer)             ⌘ ,gp',
         \'Git! push'],
-    \['▷ git pull         (Fugitive, salida por buffer)             ⌘ ,gP',
+    \['▷ git pull         (Fugitive, salida por buffer)             ⌘ ,gl',
         \'Git! pull'],
     \['▷ git prompt       (Fugitive, salida por buffer)             ⌘ ,gi',
         \'exe "Git! " input("comando git: ")'],
@@ -181,12 +183,22 @@ nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>ga :Git add -A<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
 nnoremap <silent> <leader>gc :Gcommit<CR>
-nnoremap <silent> <leader>gp :Git push<CR>
-nnoremap <silent> <leader>gl :Git pull<CR>
+nnoremap <silent> <leader>gp :Gpush<CR>
+nnoremap <silent> <leader>gl :Gpull<CR>
 nnoremap <silent> <leader>gr :Gremove<CR>
 nnoremap <silent> <leader>gb :Gbrowse<CR>
 vnoremap <silent> <leader>gb :Gbrowse<CR>
 
+" Write COMMIT_EDITMSG and push to current branch
+"function! PullCurrentBranch()
+  "exe ":Gwrite"
+  "let branch = fugitive#statusline()
+  "let branch = substitute(branch, '\c\v\[?GIT\(([a-z0-9\-_\./:]+)\)\]?', $BRANCH.' \1', 'g')
+  "exe ":Git pull origin" . branch
+"endfunction
+
+"" Map gwp keys to call the function
+"nnoremap gwp :call PullCurrentBranch()<CR>
 "Dispatch
 autocmd FileType ruby let b:dispatch = 'ruby %'
 autocmd FileType python let b:dispatch = 'python %'

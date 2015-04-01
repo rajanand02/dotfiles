@@ -1,6 +1,6 @@
 # collection
 snippet coll
-	${1:Collection}  = new Meteor.Collection "${2:collection}"
+	${1:Collection}  = new Mongo.Collection "${2:collection}"
 
 # isClient block
 snippet isc
@@ -11,6 +11,12 @@ snippet isc
 snippet iss
 	if Meteor.isServer
 	  ${1:isServer block}
+	  
+
+# isServer block
+snippet iscod
+	if Meteor.isCodrova
+		${1:isServer block}
 
 # startup
 snippet start
@@ -29,30 +35,35 @@ snippet sub
 # Template events
 snippet tle
 	Template.${1:Template}.events
-	  "${2: action} ${3: on}": ->
-	     ${4: event-block}	
+	  "${2: action} ${3: on}":(${4:}) ->
+	     ${5: event-block}	
 
-# Template helper
-snippet tlh
-	Template.${1:Template}.${2:helper}= ->
-	  ${3:block}
-
+	
 # Template mulitiple helpers
-snippet tlhs
+snippet tlh
 	Template.${1:Template}.helpers
 	  ${2:name}: ->
 		${3: block-1}
-	  ${4:name}: ->
-		${5: block-2}
 
 # Template rendered
 snippet tlr
-	Template.${1:Template}.rendered= ->
+	Template.${1:Template}.onRendered ->
 	  ${2: block}
 
-# Deps.autorun
-snippet deps
-	Deps.autorun ->
+
+# Template onCreated 
+snippet tlc
+	Template.${1:Template}.onCreated ->
+		${2: block}
+
+# Template onDestroyed
+snippet tlc
+	Template.${1:Template}.onDestroyed ->
+		${2: block}
+
+# Tracker.autorun
+snippet trac
+	Tracker.autorun ->
 	  ${1:deps block}
 
 # Set Session
@@ -62,6 +73,14 @@ snippet sset
 # get Session
 snippet sget
 	Session.get "${1:key}"
+
+# Set default session
+snippet sdef
+	Session.setDefault "${1:key}", "${2:value}"
+
+# Session.equals
+snippet seq
+	Session.equals "${1:key}", "${2:value}"
 
 # Meteor.methods
 snippet meth
@@ -86,10 +105,10 @@ snippet rconfig
 	  loadingTemplate: '${2:Loading}',
 	  notFoundTemplate: '${3:NotFound}',
 
-# Router.map
-snippet rmap
-	Router.map ->
-	  @route '${1:name}', path: '${2:path}'
+# Router.map depricated
+#snippet rmap
+#Router.map ->
+#@route '${1:name}', path: '${2:path}'
 
 # Router go
 snippet rgo
@@ -100,8 +119,8 @@ snippet route
 	@route '${1:name}', 
 	  path: '${2:path}'
 	  template: '${3:template}'
-# single route with controller
 
+# single route with controller
 snippet rcon
 	@route '${1:name}', 
 	  path: '${2:path}'
@@ -110,7 +129,7 @@ snippet rcon
 
 # register global helper
 snippet regh
-	UI.registerHelper "${1}", ("${2}") ->
+	Template.registerHelper "${1}", ("${2}") ->
 	  ${3:code}	
 
 # user name only for accounts ui
@@ -118,6 +137,104 @@ snippet aconfig
 	Accounts.ui.config
 	  passwordSignupFields: 'USERNAME_ONLY'
 
-snippet aclick
+# other miscellaneous snippets
+
+# Meteor.user()
+snippet muser
+	Meteor.user()
+
+# Meteor.userId()
+snippet muid
+	Meteor.userId()
+
+# dynamic template
+snippet dynamic
+	{{> Template.dynamic template="${1:template}"}}
+
+
+# single event
+snippet tevent
+	"${1: action} ${2: on}":(${3:}) ->
+		${4}	
+
+# click event
+snippet click
 	"click ${1:selector}": (${2}) ->
-	  ${3}
+		${3}
+
+# double click
+snippet dbclick
+	"dbclick ${1:selector}": (${2}) ->
+		${3}
+
+
+# focus 
+snippet focus
+	"focus ${1:selector}": (${2}) ->
+		${3}
+
+# blur 
+snippet blur 
+	"blur ${1:selector}": (${2}) ->
+		${3}
+
+# change 
+snippet change 
+	"change ${1:selector}": (${2}) ->
+		${3}
+
+# mouseenter
+snippet mouseenter
+	"mouseenter ${1:selector}": (${2}) ->
+		${3}
+
+# mouseleave
+snippet mouseleave
+	"mouseleave ${1:selector}": (${2}) ->
+		${3}
+
+# mousedown
+snippet mousedown
+	"mousedown ${1:selector}": (${2}) ->
+		${3}
+
+# mouseup
+snippet mouseup
+	"mouseup ${1:selector}": (${2}) ->
+		${3}
+
+# keypress 
+snippet keypress
+	"keypress ${1:selector}": (${2}) ->
+		${3}
+		
+
+# keydown
+snippet keydown
+	"keydown ${1:selector}": (${2}) ->
+		${3}
+
+# keyup
+snippet keyup
+	"keyup ${1:selector}": (${2}) ->
+		${3}
+
+# Meteor.setTimeout
+snippet setTimeout
+	Meteor.setTimeout(->
+		${1}
+	), ${2}
+
+# Meteor.setInterval
+snippet setInterval
+	Meteor.setInterval(->
+		${1}
+	), ${2}
+
+# Meteor.clearTimeout
+snippet clearTimeout
+	Meteor.clearTimeout(${1})
+
+# Meteor.clearInterval
+snippet clearInterval
+	Meteor.clearInterval(${1})

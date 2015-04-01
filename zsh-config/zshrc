@@ -3,6 +3,8 @@ ZSH=$HOME/.oh-my-zsh
 #predict-on
 source ~/.zsh/zsh-vcs-prompt/zshrc.sh
 source ~/dotfiles/zsh-config/aliases.zsh
+source ~/.tmux/tmuxinator.zsh
+export DISABLE_AUTO_TITLE=true
 export PATH=~/.meteor/tools/latest/bin:$PATH
 ZSH_VCS_PROMPT_ENABLE_CACHING='true'
 RPROMPT='$(vcs_super_info)'
@@ -14,15 +16,26 @@ fortune | cowsay
 plugins=(tmux tmuxinator bundler capistrano debian gem git git-flow github git-remote-branch gitignore heroku history rails rake rbenv ruby sudo terminator rsync meteor battery nanoc zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.nvm/nvm.sh
 fpath=(~/.zsh-completions/src $fpath)
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 # prevents accidental ctrl-s 
 stty -ixon
 
-export NVM_DIR="/home/raj/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="/home/raj/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
+fpath=(~/.zsh/zsh-completions/src $fpath)
+export PATH=${PATH}:~/Downloads/adt-bundle-linux-x86_64-20140702/sdk/tools
+export PATH=${PATH}:~/Downloads/adt-bundle-linux-x86_64-20140702/sdk/platform-tools
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=$HOME/local/bin:$PATH
+
+export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
