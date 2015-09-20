@@ -7,9 +7,11 @@ alias re='cowsay "we will meet soon" && sudo reboot'
 
 # system commands
 alias v="vim"
+alias vi="vim"
+alias vsplit="vim -O"
 alias x='exit'
 alias m='cmatrix -s'
-#alias tmux="TERM=screen-256color-bce tmux -u"
+alias tmux="TERM=screen-256color-bce tmux -u"
 
 # show progress bar while cp mv
 #alias cp='cp -gR'
@@ -38,6 +40,6 @@ alias pd='cap production deploy'
 #git
 alias gaa='git add -A'
 alias gset='git remote set-url origin'
-
+# You can use whatever you want as an alias, like for mondays:
 # kill all tmux session
 alias alias kts='tmux ls | awk '\''{print $1}'\'' | sed '\''s/://g'\'' | xargs -I{} tmux kill-session -t {}'

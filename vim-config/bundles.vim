@@ -16,9 +16,10 @@ NeoBundle 'tpope/vim-fugitive'                     "git inside vim
 NeoBundle 'tpope/vim-repeat'                       "Helps to repeat previous command with . key
 NeoBundle 'tpope/vim-endwise.git'                  "To enable automatic end in loops
 NeoBundle 'tpope/vim-surround.git'                 "autocomplete and change/include tags, quotes,etc..
-"NeoBundle 'tpope/vim-rake.git'
-"NeoBundle 'tpope/vim-rails.git'                    "Make vim as Rails ide
+NeoBundle 'tpope/vim-rake.git'
+NeoBundle 'tpope/vim-rails.git'                    "Make vim as Rails ide
 NeoBundle 'tpope/vim-markdown.git'
+NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-vinegar'
 NeoBundle 'tpope/vim-abolish'
@@ -45,12 +46,14 @@ NeoBundle 'sickill/vim-pasta'
 NeoBundle "mbbill/undotree"                        "Undo tree that help while undoing things
 NeoBundle "mhinz/vim-startify"                     "keeps histroy of previously opened files
 NeoBundle 'christoomey/vim-tmux-navigator'         "to navigate between tmux windows
+NeoBundle 'tmux-plugins/vim-tmux'
+NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 "NeoBundle 'Valloric/YouCompleteMe'                "replaced with neocomplete
 NeoBundle 'chriskempson/base16-vim'                "Colors to vim
 NeoBundle 'matze/vim-move'                         "<A-k>   Move current line/selection up,  <A-j>   Move current line/selection down
 
-"NeoBundle 'vim-ruby/vim-ruby'
-"NeoBundle 'Keithbsmiley/rspec.vim'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'Keithbsmiley/rspec.vim'
 
 "Markdown
 NeoBundle 'nelstrom/vim-markdown-folding'
@@ -71,7 +74,7 @@ NeoBundle 'bonsaiben/bootstrap-snippets'            " Boottrap Snippets
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle "garbas/vim-snipmate"
 NeoBundle "gregsexton/MatchTag"
-
+NeoBundle "slim-template/vim-slim"
 "colors to vim
 NeoBundle 'Rykka/colorv.vim'
 NeoBundle 'flazz/vim-colorschemes'
@@ -126,10 +129,12 @@ NeoBundle 'wellle/targets.vim'
 "NeoBundle 'ap/vim-css-color'
 NeoBundle 'gorodinskiy/vim-coloresque.git'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'cmather/vim-meteor-snippets'
+NeoBundle 'rajanand02/vim-meteor-snippets'
 "NeoBundle 'whatyouhide/vim-gotham'
 NeoBundle 'ryanss/vim-hackernews'
 NeoBundle 'shime/vim-livedown'
 
 NeoBundle 'walm/jshint.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundleCheck                                     "Installation check.

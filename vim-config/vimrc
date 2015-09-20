@@ -83,7 +83,7 @@ let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 
-" Enable snipMate compatibility feature.
+ "Enable snipMate compatibility feature.
 let g:neosnippet#enable_snipmate_compatibility = 1
 let g:neocomplete#force_overwrite_completefunc = 1
 
@@ -298,5 +298,8 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ }
+
+" Use octodown as default build command for Markdown files
+autocmd FileType markdown let b:dispatch = 'octodown --live-reload %'
 
 set viminfo='100,n$HOME/.vim/files/info/viminfo

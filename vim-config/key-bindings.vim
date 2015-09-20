@@ -9,6 +9,7 @@ vnoremap <tab> %
 nnoremap <leader>qt :tabonly<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>qa :qa<CR>
 nnoremap Q :q!<CR>                             "avoid entering ex mode 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :x<CR>
@@ -232,3 +233,17 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
       \ "\<Plug>(neosnippet_expand_or_jump)"
       \: "\<TAB>"
 
+" jshint validation
+nnoremap <silent><F1> :JSHint<CR>
+inoremap <silent><F1> <C-O>:JSHint<CR>
+vnoremap <silent><F1> :JSHint<CR>
+
+" show next jshint error
+nnoremap <silent><F2> :lnext<CR>
+inoremap <silent><F2> <C-O>:lnext<CR>
+vnoremap <silent><F2> :lnext<CR>
+
+" show previous jshint error
+nnoremap <silent><F3> :lprevious<CR>
+inoremap <silent><F3> <C-O>:lprevious<CR>
+vnoremap <silent><F3> :lprevious<CR>

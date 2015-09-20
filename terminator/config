@@ -1,6 +1,5 @@
 [global_config]
-  custom_url_handler = Terminator
-  enabled_plugins = CustomCommandsMenu, LaunchpadBugURLHandler
+  enabled_plugins = TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   title_transmit_bg_color = "#d30102"
   focus = system
 [keybindings]
@@ -9,27 +8,33 @@
     scrollbar_position = hidden
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     login_shell = True
-    background_darkness = 0.0
-    cursor_shape = ibeam
+    custom_command = TERM=screen-256color-bce tmux -u
     background_image = None
     cursor_color = "#eee8d5"
     foreground_color = "#eee8d5"
     use_custom_command = True
+    scroll_on_output = False
     icon_bell = False
     show_titlebar = False
-    custom_command = TERM=screen-256color-bce tmux -u
+    copy_on_selection = True
     background_color = "#002b36"
   [[solarized-dark]]
+    scrollbar_position = hidden
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    login_shell = True
     custom_command = TERM=screen-256color-bce tmux -u
     background_image = None
-    cursor_color = "#002b36"
-    foreground_color = "#2fa615"
-    background_color = "#eee8d5"
+    cursor_color = "#eee8d5"
+    foreground_color = "#eee8d5"
+    use_custom_command = True
+    show_titlebar = False
+    background_color = "#002b36"
   [[solarized-light]]
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    background_color = "#eee8d5"
     background_image = None
-  [[new]]
-    background_image = None
+    cursor_color = "#002b36"
+    foreground_color = "#002b36"
 [layouts]
   [[default]]
     [[[child1]]]
