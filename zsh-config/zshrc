@@ -32,10 +32,9 @@ stty -ixon
 fpath=(~/.zsh/zsh-completions/src $fpath)
 export PATH=${PATH}:~/Downloads/adt-bundle-linux-x86_64-20140702/sdk/tools
 export PATH=${PATH}:~/Downloads/adt-bundle-linux-x86_64-20140702/sdk/platform-tools
-
+export ANDROID_HOME=/$HOME/Android/Sdk
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH=$HOME/local/bin:$PATH
-
 export PATH="$HOME/.bin:$PATH"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"

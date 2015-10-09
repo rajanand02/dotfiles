@@ -137,4 +137,17 @@ NeoBundle 'shime/vim-livedown'
 NeoBundle 'walm/jshint.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'maksimr/vim-jsbeautify'
+
+" csharp
+NeoBundle 'OrangeT/vim-csharp'
+NeoBundle 'fsharp/vim-fsharp', {
+           \ 'description': 'F# support for Vim',
+           \ 'lazy': 1,
+           \ 'autoload': {'filetypes': 'fsharp'},
+           \ 'build': {
+           \   'unix':  'make fsautocomplete',
+           \ },
+           \ 'build_commands': ['curl', 'make', 'mozroots', 'touch', 'unzip'],
+           \}
 NeoBundleCheck                                     "Installation check.
+

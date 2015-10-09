@@ -7,7 +7,7 @@ au FocusLost * :wa
 nnoremap <tab> %
 vnoremap <tab> %
 nnoremap <leader>qt :tabonly<CR>
-nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>nt :tabnew<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qa :qa<CR>
 nnoremap Q :q!<CR>                             "avoid entering ex mode 
@@ -247,3 +247,5 @@ vnoremap <silent><F2> :lnext<CR>
 nnoremap <silent><F3> :lprevious<CR>
 inoremap <silent><F3> <C-O>:lprevious<CR>
 vnoremap <silent><F3> :lprevious<CR>
+let g:tern_map_keys=1
+nnoremap <leader>ff :TernDef<CR>
