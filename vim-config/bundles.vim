@@ -137,9 +137,11 @@ NeoBundle 'shime/vim-livedown'
 NeoBundle 'walm/jshint.vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'ntpeters/vim-better-whitespace'
 
 " csharp
 NeoBundle 'OrangeT/vim-csharp'
+NeoBundle 'rhysd/committia.vim'
 NeoBundle 'fsharp/vim-fsharp', {
            \ 'description': 'F# support for Vim',
            \ 'lazy': 1,
