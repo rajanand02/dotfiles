@@ -220,7 +220,8 @@ let g:syntastic_error_symbol = '✗'
 let g:syntastic_style_error_symbol = '✠'
 let g:syntastic_warning_symbol = '∆'
 let g:syntastic_style_warning_symbol = '☢'
-
+let g:syntastic_javascript_checkers = ['eslint']
+let g:jsx_ext_required = 0
 "VimShell settings and key mappings
 let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
 let g:vimshell_prompt =  '~~> '

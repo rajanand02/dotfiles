@@ -139,6 +139,14 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'maksimr/vim-jsbeautify'
 NeoBundle 'ntpeters/vim-better-whitespace'
 
+" elixir
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'mattreduce/vim-mix'
+"
+" react
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'justinj/vim-react-snippets'
+NeoBundle 'jaxbot/syntastic-react'
 " csharp
 NeoBundle 'OrangeT/vim-csharp'
 NeoBundle 'rhysd/committia.vim'
