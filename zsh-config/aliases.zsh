@@ -1,4 +1,4 @@
-source ~/dotfiles/zsh-config/ssh.zsh
+#source ~/dotfiles/zsh-config/ssh.zsh
 
 # reboot, hibernate and shutdown
 alias brb='cowsay "i will be waiting buddy" && sudo pm-hibernate'
