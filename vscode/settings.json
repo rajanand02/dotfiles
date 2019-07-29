@@ -1,0 +1,111 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.fontSize": 17,
+  "editor.tabSize": 2,
+  // "editor.fontFamily": "'monospace', 'Courier New', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.lineNumbers": "relative",
+  "editor.rulers": [100, 120],
+  "editor.tokenColorCustomizations": {
+    "[Cobalt2]": {
+      "variables": "#E06C75"
+    }
+  },
+  "editor.lineHeight": 25,
+  "editor.letterSpacing": 0.5,
+  "files.trimTrailingWhitespace": true,
+  "editor.fontWeight": "400",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 5,
+  "editor.cursorBlinking": "solid",
+  "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": true,
+  "vim.overrideCopy": false,
+  "window.zoomLevel": 1,
+  "workbench.activityBar.visible": true,
+  "window.menuBarVisibility": "toggle",
+  "guides.enabled": false,
+  "workbench.statusBar.visible": true,
+  "editor.minimap.enabled": false,
+  "files.autoSave": "off",
+  "path-intellisense.mappings": {
+    "/": "${workspaceRoot}",
+    "@actionCreators": "/${workspaceRoot}/src/actions",
+    "@actionTypes": "/${workspaceRoot}/constants/actions",
+    "@api": "/${workspaceRoot}/src/api",
+    "@assets": "/${workspaceRoot}/assets",
+    "@common": "/${workspaceRoot}/src/components/Common",
+    "@components": "/${workspaceRoot}/src/components",
+    "@globalConstants": "/${workspaceRoot}/constants",
+    "@globalUtils": "/${workspaceRoot}/src/utils",
+    "@routes": "/${workspaceRoot}/src/routes",
+    "@styles": "/${workspaceRoot}/styles",
+    "@sassVariables": "/${workspaceRoot}/styles/_variables.scss"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "html, css, jsx"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "plaintext": "jade"
+  },
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": true,
+    "suppressWelcomeNotice": false
+  },
+  "workbench.panel.location": "right",
+  "sync.gist": "2c80f9b80e1b45704e4a3bab97c07ba7",
+  "sync.lastUpload": "",
+  "sync.autoDownload": false,
+  "sync.autoUpload": false,
+  "sync.lastDownload": "",
+  "sync.forceDownload": false,
+  "sync.anonymousGist": false,
+  "sync.host": "",
+  "sync.pathPrefix": "",
+  "sync.quietSync": false,
+  "sync.askGistName": false,
+  "git.ignoreMissingGitWarning": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "terminal.integrated.shell.linux": "/bin/zsh",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.titleBarStyle": "custom",
+  "editor.multiCursorModifier": "alt",
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#000",
+    "titleBar.inactiveForeground": "#000000CC",
+    "titleBar.activeBackground": "#FFC600",
+    "titleBar.inactiveBackground": "#FFC600CC"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Cobalt2",
+  "workbench.iconTheme": "material-icon-theme",
+  "terminal.integrated.rendererType": "dom"
+}
