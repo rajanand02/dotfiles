@@ -1,48 +1,71 @@
 [global_config]
-  enabled_plugins = TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  title_transmit_bg_color = "#d30102"
+  enabled_plugins = TerminalShot, APTURLHandler, LaunchpadCodeURLHandler, LaunchpadBugURLHandler
   focus = system
+  title_transmit_bg_color = "#d30102"
 [keybindings]
-[profiles]
-  [[default]]
-    scrollbar_position = hidden
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    login_shell = True
-    custom_command = TERM=screen-256color-bce tmux -u
-    background_image = None
-    cursor_color = "#eee8d5"
-    foreground_color = "#eee8d5"
-    use_custom_command = True
-    scroll_on_output = False
-    icon_bell = False
-    show_titlebar = False
-    copy_on_selection = True
-    background_color = "#002b36"
-  [[solarized-dark]]
-    scrollbar_position = hidden
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    login_shell = True
-    custom_command = TERM=screen-256color-bce tmux -u
-    background_image = None
-    cursor_color = "#eee8d5"
-    foreground_color = "#eee8d5"
-    use_custom_command = True
-    show_titlebar = False
-    background_color = "#002b36"
-  [[solarized-light]]
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    background_color = "#eee8d5"
-    background_image = None
-    cursor_color = "#002b36"
-    foreground_color = "#002b36"
+  go_next = <Primary><Shift>n
 [layouts]
   [[default]]
-    [[[child1]]]
-      type = Terminal
-      parent = window0
-      profile = default
-    [[[window0]]]
-      type = Window
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 9f6bf5b4-19ab-4d52-b9b6-b001caec786a
+      last_active_window = True
+      maximised = False
+      order = 0
       parent = ""
-      size = 800, 600
+      position = 116:60
+      size = 1313, 844
+      title = /usr/bin/zsh
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 654
+      ratio = 0.5
+      type = HPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 31708edc-a26a-4705-974e-15aa43b41554
+    [[[terminal3]]]
+      command = ""
+      order = 1
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 9f6bf5b4-19ab-4d52-b9b6-b001caec786a
 [plugins]
+[profiles]
+  [[default]]
+    background_color = "#002b36"
+    background_darkness = 0.85
+    copy_on_selection = True
+    cursor_color = "#eee8d5"
+    custom_command = TERM=screen-256color-bce tmux -u
+    font = Monospace 12
+    foreground_color = "#eee8d5"
+    icon_bell = False
+    login_shell = True
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[solarized-dark]]
+    background_color = "#002b36"
+    cursor_color = "#eee8d5"
+    custom_command = TERM=screen-256color-bce tmux -u
+    foreground_color = "#eee8d5"
+    login_shell = True
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[solarized-light]]
+    background_color = "#eee8d5"
+    cursor_color = "#002b36"
+    foreground_color = "#002b36"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+  [[test]]
+    cursor_color = "#aaaaaa"
