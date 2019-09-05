@@ -3,7 +3,8 @@ ZSH=$HOME/.oh-my-zsh
 #predict-on
 #source ~/.zsh/zsh-vcs-prompt/zshrc.sh
 source ~/dotfiles/zsh-config/aliases.zsh
-#source ~/.tmux/tmuxinator.zsh
+source ~/dotfiles/zsh-config/private-aliases.zsh
+source ~/.tmux/tmuxinator.zsh
 export DISABLE_AUTO_TITLE=true
 #ZSH_VCS_PROMPT_ENABLE_CACHING='true'
 RPROMPT='$(vcs_super_info)'

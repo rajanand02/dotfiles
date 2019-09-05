@@ -17,55 +17,36 @@
       size = 1313, 844
       title = /usr/bin/zsh
       type = Window
-    [[[child1]]]
-      order = 0
-      parent = child0
-      position = 654
-      ratio = 0.5
-      type = HPaned
-    [[[terminal2]]]
-      order = 0
-      parent = child1
-      profile = default
-      type = Terminal
-      uuid = 31708edc-a26a-4705-974e-15aa43b41554
-    [[[terminal3]]]
-      command = ""
-      order = 1
-      parent = child1
-      profile = default
-      type = Terminal
-      uuid = 9f6bf5b4-19ab-4d52-b9b6-b001caec786a
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#002b36"
-    background_darkness = 0.85
+    background_color = "#122738"
     copy_on_selection = True
-    cursor_color = "#eee8d5"
+    cursor_color = "#ffc600"
     custom_command = TERM=screen-256color-bce tmux -u
     font = Monospace 12
-    foreground_color = "#eee8d5"
+    foreground_color = "#ffc600"
     icon_bell = False
     login_shell = True
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    palette = "#073642:#ff628c:#3ad900:#ffc600:#268bd2:#d33682:#80fcff:#eee8d5:#0088ff:#ff7200:#3ad900:#ffc600:#0088ff:#6c71c4:#ffffff:#ffffff"
     scrollbar_position = hidden
     show_titlebar = False
+    use_custom_command = True
     use_system_font = False
   [[solarized-dark]]
-    background_color = "#002b36"
+    background_color = "#122738"
     cursor_color = "#eee8d5"
     custom_command = TERM=screen-256color-bce tmux -u
     foreground_color = "#eee8d5"
     login_shell = True
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#0c9c29:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
   [[solarized-light]]
     background_color = "#eee8d5"
-    cursor_color = "#002b36"
-    foreground_color = "#002b36"
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    cursor_color = "#0c9c29"
+    foreground_color = "#0c9c29"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#0c9c29:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
   [[test]]
     cursor_color = "#aaaaaa"

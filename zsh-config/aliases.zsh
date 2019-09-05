@@ -43,3 +43,13 @@ alias gset='git remote set-url origin'
 # You can use whatever you want as an alias, like for mondays:
 # kill all tmux session
 alias alias kts='tmux ls | awk '\''{print $1}'\'' | sed '\''s/://g'\'' | xargs -I{} tmux kill-session -t {}'
+
+# npm
+alias ns='npm start'
+alias ni='npm install'
+alias nid='npm install -D'
+alias nu='npm uninstall'
+alias nr='npm run'
+
+#network
+alias restart-network='sudo /etc/init.d/network-manager restart && sudo /etc/init.d/networking restart'
