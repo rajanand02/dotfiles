@@ -23,9 +23,10 @@
     background_color = "#122738"
     copy_on_selection = True
     cursor_color = "#ffc600"
+    cursor_color_fg = False
     custom_command = TERM=screen-256color-bce tmux -u
     font = Monospace 12
-    foreground_color = "#ffc600"
+    foreground_color = "#ffffff"
     icon_bell = False
     login_shell = True
     palette = "#073642:#ff628c:#3ad900:#ffc600:#268bd2:#d33682:#80fcff:#eee8d5:#0088ff:#ff7200:#3ad900:#ffc600:#0088ff:#6c71c4:#ffffff:#ffffff"
