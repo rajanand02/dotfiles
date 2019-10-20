@@ -26,7 +26,7 @@ NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-rbenv'
 NeoBundle 'tpope/vim-obsession'
 
-" All scrooloose plugins  
+" All scrooloose plugins
 NeoBundle "scrooloose/syntastic"                   "to highlight syntax
 NeoBundle 'scrooloose/nerdcommenter'               "to autocommenting based on file type
 NeoBundle "scrooloose/nerdtree"                    "classic file explorer
@@ -80,6 +80,7 @@ NeoBundle 'Rykka/colorv.vim'
 NeoBundle 'flazz/vim-colorschemes'
 "NeoBundle 'dhruvasagar/vim-railscasts-theme'
 "NeoBundle 'altercation/vim-colors-solarized.git'
+NeoBundle 'herrbischoff/cobalt2.vim'
 "NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'Zuckonit/vim-airline-tomato'
@@ -98,7 +99,7 @@ NeoBundle 'mattn/emmet-vim'
 "NeoBundle 'mattn/webapi-vim'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
-NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
+"NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 
 "new plugins have to explore
 NeoBundle 'junegunn/vim-easy-align'
@@ -115,7 +116,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'marijnh/tern_for_vim'
 
 "new plugins for node,coffee,js,scss etc
-NeoBundle 'lukaszkorecki/CoffeeTags'
+"NeoBundle 'lukaszkorecki/CoffeeTags'
 NeoBundle 'moll/vim-node'
 "NeoBundle 'tpope/vim-haml'
 NeoBundle 'tyru/open-browser.vim'
@@ -131,7 +132,7 @@ NeoBundle 'gorodinskiy/vim-coloresque.git'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'rajanand02/vim-meteor-snippets'
 "NeoBundle 'whatyouhide/vim-gotham'
-NeoBundle 'ryanss/vim-hackernews'
+"NeoBundle 'ryanss/vim-hackernews'
 NeoBundle 'shime/vim-livedown'
 
 NeoBundle 'walm/jshint.vim'
