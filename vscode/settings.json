@@ -3,24 +3,29 @@
   "editor.fontSize": 17,
   "editor.tabSize": 2,
   // "editor.fontFamily": "'monospace', 'Courier New', monospace, 'Droid Sans Fallback'",
-  "editor.fontFamily": "Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+  // "editor.fontFamily": "Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Fira code Retina, monospace",
+  "editor.fontLigatures": true,
   "editor.lineNumbers": "relative",
   "editor.rulers": [100, 120],
   "editor.tokenColorCustomizations": {
     "[Cobalt2]": {
-      "variables": "#E06C75"
+      "variables": "#ff628c"
     }
   },
   "editor.lineHeight": 25,
   "editor.letterSpacing": 0.5,
   "files.trimTrailingWhitespace": true,
   "editor.fontWeight": "400",
-  "editor.cursorStyle": "line",
-  "editor.cursorWidth": 5,
-  "editor.cursorBlinking": "solid",
+  "editor.cursorWidth": 4,
   "vim.useCtrlKeys": false,
   "vim.useSystemClipboard": true,
   "vim.overrideCopy": false,
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
   "window.zoomLevel": 1,
   "workbench.activityBar.visible": true,
   "window.menuBarVisibility": "toggle",
@@ -84,12 +89,12 @@
   },
   "terminal.integrated.shell.linux": "/bin/zsh",
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fontLigatures": "'ss02', 'ss19'"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.titleBarStyle": "custom",
-  "editor.multiCursorModifier": "alt",
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#000",
     "titleBar.inactiveForeground": "#000000CC",
@@ -107,5 +112,34 @@
   },
   "workbench.colorTheme": "Cobalt2",
   "workbench.iconTheme": "material-icon-theme",
-  "terminal.integrated.rendererType": "dom"
+  "terminal.integrated.rendererType": "dom",
+  "turboConsoleLog.addSemicolonInTheEnd": true,
+  "turboConsoleLog.quote": "'",
+  "turboConsoleLog.logMessagePrefix": "Log",
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.renderWhitespace": "all",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "open-in-browser.default": "google-chrome",
+  "openInGitHub.providerType": "github",
+  "openInGitHub.defaultPullRequestBranch": "master",
+  "editor.formatOnSave": true,
+  "terminal.integrated.cursorStyle": "line",
+  "workbench.sideBar.location": "right",
+  "explorer.openEditors.visible": 0,
+  "editor.cursorBlinking": "expand",
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "line",
+  "vim.cursorStylePerMode.replace": "line",
+  "vim.cursorStylePerMode.visual": "line",
+  "vim.cursorStylePerMode.visualblock": "line",
+  "vim.cursorStylePerMode.visualline": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "editor.wordWrapColumn": 120,
+  "editor.gotoLocation.multiple": "gotoAndPeek",
+  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontSize": 15,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false
 }

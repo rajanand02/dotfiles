@@ -432,8 +432,8 @@
 			"name": "Variable",
 			"scope": "variable",
 			"settings": {
-				// "foreground": "#e1efff"
-				"foreground": "#E06c75"
+				"foreground": "#ff628c"
+				// "foreground": "#E06c75"
 			}
 		},
 		{

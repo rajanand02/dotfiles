@@ -29,7 +29,7 @@
     foreground_color = "#ffffff"
     icon_bell = False
     login_shell = True
-    palette = "#073642:#ff628c:#3ad900:#ffc600:#268bd2:#d33682:#80fcff:#eee8d5:#0088ff:#ff7200:#3ad900:#ffc600:#0088ff:#6c71c4:#ffffff:#ffffff"
+    palette = "#073642:#ff628c:#3ad900:#ffc600:#268bd2:#d33682:#80fcff:#eee8d5:#0088ff:#ff628c:#3ad900:#ffc600:#0088ff:#6c71c4:#ffffff:#ffffff"
     scrollbar_position = hidden
     show_titlebar = False
     use_custom_command = True
@@ -40,7 +40,7 @@
     custom_command = TERM=screen-256color-bce tmux -u
     foreground_color = "#eee8d5"
     login_shell = True
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#0c9c29:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#0c9c29:#ff628c:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
@@ -48,6 +48,6 @@
     background_color = "#eee8d5"
     cursor_color = "#0c9c29"
     foreground_color = "#0c9c29"
-    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#0c9c29:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#0c9c29:#ff628c:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
   [[test]]
     cursor_color = "#aaaaaa"
