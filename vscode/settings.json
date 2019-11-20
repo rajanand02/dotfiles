@@ -1,5 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
+  /* Editor */
   "editor.fontSize": 17,
   "editor.tabSize": 2,
   // "editor.fontFamily": "'monospace', 'Courier New', monospace, 'Droid Sans Fallback'",
@@ -15,24 +16,25 @@
   },
   "editor.lineHeight": 25,
   "editor.letterSpacing": 0.5,
-  "files.trimTrailingWhitespace": true,
   "editor.fontWeight": "400",
   "editor.cursorWidth": 4,
-  "vim.useCtrlKeys": false,
-  "vim.useSystemClipboard": true,
-  "vim.overrideCopy": false,
-  "vim.easymotion": true,
-  "vim.sneak": true,
-  "vim.incsearch": true,
-  "vim.hlsearch": true,
-  "vim.leader": "<space>",
-  "window.zoomLevel": 1,
-  "workbench.activityBar.visible": true,
-  "window.menuBarVisibility": "toggle",
-  "guides.enabled": false,
-  "workbench.statusBar.visible": true,
   "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "editor.wordWrapColumn": 120,
+  "editor.gotoLocation.multiple": "gotoAndPeek",
+  "editor.cursorBlinking": "expand",
+
+  /* Window */
+  "window.zoomLevel": 1,
+  "window.menuBarVisibility": "toggle",
+  "window.titleBarStyle": "custom",
+
+  /* Files */
+  "files.trimTrailingWhitespace": true,
   "files.autoSave": "off",
+
+  /* Path */
   "path-intellisense.mappings": {
     "/": "${workspaceRoot}",
     "@actionCreators": "/${workspaceRoot}/src/actions",
@@ -47,6 +49,8 @@
     "@styles": "/${workspaceRoot}/styles",
     "@sassVariables": "/${workspaceRoot}/styles/_variables.scss"
   },
+
+  /* Emmet */
   "emmet.syntaxProfiles": {
     "javascript": "html, css, jsx"
   },
@@ -55,6 +59,11 @@
     "vue-html": "html",
     "plaintext": "jade"
   },
+
+  /* Git & Git lens*/
+  "git.ignoreMissingGitWarning": true,
+  "openInGitHub.providerType": "github",
+  "openInGitHub.defaultPullRequestBranch": "master",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -67,40 +76,22 @@
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": false
   },
-  "workbench.panel.location": "right",
-  "sync.gist": "2c80f9b80e1b45704e4a3bab97c07ba7",
-  "sync.lastUpload": "",
-  "sync.autoDownload": false,
-  "sync.autoUpload": false,
-  "sync.lastDownload": "",
-  "sync.forceDownload": false,
-  "sync.anonymousGist": false,
-  "sync.host": "",
-  "sync.pathPrefix": "",
-  "sync.quietSync": false,
-  "sync.askGistName": false,
-  "git.ignoreMissingGitWarning": true,
+
+  /* Explorer */
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
-  "telemetry.enableTelemetry": false,
-  "telemetry.enableCrashReporter": false,
+  "explorer.openEditors.visible": 0,
+
+  /* Language */
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "terminal.integrated.shell.linux": "/bin/zsh",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.fontLigatures": "'ss02', 'ss19'"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "window.titleBarStyle": "custom",
-  "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#000",
-    "titleBar.inactiveForeground": "#000000CC",
-    "titleBar.activeBackground": "#FFC600",
-    "titleBar.inactiveBackground": "#FFC600CC"
-  },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -110,36 +101,73 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Cobalt2",
-  "workbench.iconTheme": "material-icon-theme",
-  "terminal.integrated.rendererType": "dom",
-  "turboConsoleLog.addSemicolonInTheEnd": true,
-  "turboConsoleLog.quote": "'",
-  "turboConsoleLog.logMessagePrefix": "Log",
-  "vsicons.dontShowNewVersionMessage": true,
-  "editor.renderWhitespace": "all",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "open-in-browser.default": "google-chrome",
-  "openInGitHub.providerType": "github",
-  "openInGitHub.defaultPullRequestBranch": "master",
-  "editor.formatOnSave": true,
+
+  /* Turbo console */
+  "turboConsoleLog.addSemicolonInTheEnd": true,
+  "turboConsoleLog.quote": "'",
+  "turboConsoleLog.logMessagePrefix": "Log",
+
+
+  /* Terminal */
   "terminal.integrated.cursorStyle": "line",
-  "workbench.sideBar.location": "right",
-  "explorer.openEditors.visible": 0,
-  "editor.cursorBlinking": "expand",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.shell.linux": "/bin/zsh",
+  "terminal.integrated.rendererType": "dom",
+
+  /* Jest */
+  // stop running tests to improve performance.
+  "jest.autoEnable": false,
+  "jest.runAllTestsFirst": false,
+  "jest.showCoverageOnLoad": false,
+
+  /* Vim settings */
+  "vim.leader": "<space>",
   "vim.cursorStylePerMode.insert": "line",
   "vim.cursorStylePerMode.normal": "line",
   "vim.cursorStylePerMode.replace": "line",
   "vim.cursorStylePerMode.visual": "line",
   "vim.cursorStylePerMode.visualblock": "line",
   "vim.cursorStylePerMode.visualline": "line",
-  "terminal.integrated.cursorBlinking": true,
-  "editor.wordWrapColumn": 120,
-  "editor.gotoLocation.multiple": "gotoAndPeek",
-  "terminal.integrated.fontFamily": "monospace",
-  "terminal.integrated.fontSize": 15,
+  "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": true,
+  "vim.overrideCopy": false,
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+
+  /* WorkBench settings */
   "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.panel.defaultLocation": "right",
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": true,
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#000",
+    "titleBar.inactiveForeground": "#000000CC",
+    "titleBar.activeBackground": "#FFC600",
+    "titleBar.inactiveBackground": "#FFC600CC"
+  },
+  "workbench.colorTheme": "Cobalt2",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+
+  /* Sync settings */
+  "sync.gist": "2c80f9b80e1b45704e4a3bab97c07ba7",
+  "sync.autoDownload": false,
+  "sync.autoUpload": false,
+  "sync.forceDownload": false,
+  "sync.quietSync": false,
+
+  /* Misc */
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "open-in-browser.default": "google-chrome",
+  "guides.enabled": false,
 }

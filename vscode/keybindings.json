@@ -1,0 +1,115 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+alt+s",
+    "command": "workbench.action.files.saveAs"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "-workbench.action.files.saveAs"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.files.saveAll"
+  },
+  {
+    "key": "alt+c alt+l",
+    "command": "turboConsoleLog.displayLogMessage"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "-turboConsoleLog.displayLogMessage"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+meta+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+m ctrl+l",
+    "command": "workbench.action.toggleMultiCursorModifier"
+  },
+  {
+    "key": "ctrl+alt+u",
+    "command": "repl.action.filter",
+    "when": "inDebugRepl && textInputFocus"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-repl.action.filter",
+    "when": "inDebugRepl && textInputFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+      "key": "ctrl+t",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusSideBar",
+  },
+  {
+    "key": "ctrl+shift+,",
+    "command": "workbench.action.openSettings2"
+  },
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.openRawDefaultSettings"
+  },
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.openSettingsJson"
+  },
+  {
+    "key": "ctrl+meta+b",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "ctrl+e up",
+    "command": "editor.emmet.action.balanceIn"
+  },
+  {
+    "key": "ctrl+e down",
+    "command": "editor.emmet.action.balanceOut"
+  },
+  {
+    "key": "ctrl+shift+pagedown",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+pageup",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-workbench.action.previousEditor"
+  }
+]
