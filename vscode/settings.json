@@ -8,7 +8,10 @@
   "editor.fontFamily": "Fira code Retina, monospace",
   "editor.fontLigatures": true,
   "editor.lineNumbers": "relative",
-  "editor.rulers": [100, 120],
+  "editor.rulers": [
+    100,
+    120
+  ],
   "editor.tokenColorCustomizations": {
     "[Cobalt2]": {
       "variables": "#ff628c"
@@ -22,18 +25,15 @@
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "all",
   "editor.wordWrapColumn": 120,
-  "editor.gotoLocation.multiple": "gotoAndPeek",
+  // "editor.gotoLocation.multiple": "gotoAndPeek",
   "editor.cursorBlinking": "expand",
-
   /* Window */
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 3,
   "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
-
   /* Files */
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "off",
-
   /* Path */
   "path-intellisense.mappings": {
     "/": "${workspaceRoot}",
@@ -49,7 +49,6 @@
     "@styles": "/${workspaceRoot}/styles",
     "@sassVariables": "/${workspaceRoot}/styles/_variables.scss"
   },
-
   /* Emmet */
   "emmet.syntaxProfiles": {
     "javascript": "html, css, jsx"
@@ -59,7 +58,6 @@
     "vue-html": "html",
     "plaintext": "jade"
   },
-
   /* Git & Git lens*/
   "git.ignoreMissingGitWarning": true,
   "openInGitHub.providerType": "github",
@@ -76,19 +74,18 @@
     "suppressUpdateNotice": true,
     "suppressWelcomeNotice": false
   },
-
   /* Explorer */
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
-
+ "editor.defaultFormatter": "esbenp.prettier-vscode",
   /* Language */
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.fontLigatures": "'ss02', 'ss19'"
+    // "editor.fontLigatures": "'ss02', 'ss19'"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -104,13 +101,10 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
   /* Turbo console */
   "turboConsoleLog.addSemicolonInTheEnd": true,
   "turboConsoleLog.quote": "'",
   "turboConsoleLog.logMessagePrefix": "Log",
-
-
   /* Terminal */
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorBlinking": true,
@@ -118,13 +112,11 @@
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.shell.linux": "/bin/zsh",
   "terminal.integrated.rendererType": "dom",
-
   /* Jest */
   // stop running tests to improve performance.
   "jest.autoEnable": false,
   "jest.runAllTestsFirst": false,
   "jest.showCoverageOnLoad": false,
-
   /* Vim settings */
   "vim.leader": "<space>",
   "vim.cursorStylePerMode.insert": "line",
@@ -140,12 +132,11 @@
   "vim.sneak": true,
   "vim.incsearch": true,
   "vim.hlsearch": true,
-
   /* WorkBench settings */
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.panel.defaultLocation": "right",
-  "workbench.activityBar.visible": false,
+  "workbench.panel.defaultLocation": "bottom",
+  "workbench.activityBar.visible": true,
   "workbench.statusBar.visible": true,
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#000",
@@ -156,18 +147,26 @@
   "workbench.colorTheme": "Cobalt2",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
-
   /* Sync settings */
   "sync.gist": "2c80f9b80e1b45704e4a3bab97c07ba7",
   "sync.autoDownload": false,
   "sync.autoUpload": false,
   "sync.forceDownload": false,
   "sync.quietSync": false,
-
   /* Misc */
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
   "vsicons.dontShowNewVersionMessage": true,
   "open-in-browser.default": "google-chrome",
   "guides.enabled": false,
+  // "eslint.migration.2_x": "off",
+  "prettier.resolveGlobalModules": true,
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+],
+"bracketPairColorizer.showBracketsInGutter": true
 }
