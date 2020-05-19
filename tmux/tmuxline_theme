@@ -1,26 +1,21 @@
+# This tmux statusbar config was created by tmuxline.vim
+# on Tue, 19 May 2020
 
-set -g status-bg 'colour235'
-set -g message-command-fg 'colour222'
-set -g status-justify 'centre'
-set -g status-left-length '100'
-set -g status 'on'
-set -g pane-active-border-fg 'colour154'
-set -g message-bg 'colour238'
-set -g status-right-length '100'
-set -g status-right-attr 'none'
-set -g message-fg 'colour222'
-set -g message-command-bg 'colour238'
-set -g status-attr 'none'
-set -g pane-border-fg 'colour238'
-set -g status-left-attr 'none'
-setw -g window-status-fg 'colour121'
-setw -g window-status-attr 'none'
-setw -g window-status-activity-bg 'colour235'
-setw -g window-status-activity-attr 'none'
-setw -g window-status-activity-fg 'colour154'
-setw -g window-status-separator ''
-setw -g window-status-bg 'colour235'
-set -g status-left '#[fg=colour232,bg=colour154] #S #[fg=colour154,bg=colour238,nobold,nounderscore,noitalics]#[fg=colour222,bg=colour238] #W #[fg=colour238,bg=colour235,nobold,nounderscore,noitalics]#[fg=colour121,bg=colour235] #(whoami)  Online: #{online_status} #[fg=colour235,bg=colour235,nobold,nounderscore,noitalics]'
-set -g status-right '#[fg=colour235,bg=colour235,nobold,nounderscore,noitalics]#[fg=colour121,bg=colour235] %R  %a  %Y #[fg=colour238,bg=colour235,nobold,nounderscore,noitalics]#[fg=colour222,bg=colour238] #H #[fg=colour222,bg=colour238] #{battery_icon}#{battery_percentage}#[fg=colour154,bg=colour238,nobold,nounderscore,noitalics]#[fg=colour232,bg=colour154] #(rainbarf --battery --remaining --no-rgb)'
-setw -g window-status-format '#[fg=colour235,bg=colour235,nobold,nounderscore,noitalics]#[default] #I  #W #[fg=colour235,bg=colour235,nobold,nounderscore,noitalics]'
-setw -g window-status-current-format '#[fg=colour235,bg=colour238,nobold,nounderscore,noitalics]#[fg=colour222,bg=colour238] #I  #W  #F #[fg=colour238,bg=colour235,nobold,nounderscore,noitalics]'
+set -g status-justify "centre"
+set -g status "on"
+set -g status-left-style "none"
+set -g message-command-style "fg=colour255,bg=colour238"
+set -g status-right-style "none"
+set -g pane-active-border-style "fg=colour190"
+set -g status-style "none,bg=colour234"
+set -g message-style "fg=colour255,bg=colour238"
+set -g pane-border-style "fg=colour238"
+set -g status-right-length "100"
+set -g status-left-length "100"
+setw -g window-status-activity-style "none,fg=colour190,bg=colour234"
+setw -g window-status-separator ""
+setw -g window-status-style "none,fg=colour85,bg=colour234"
+set -g status-left "#[fg=colour17,bg=colour190] #S #[fg=colour190,bg=colour238,nobold,nounderscore,noitalics]#[fg=colour255,bg=colour238] #W #[fg=colour238,bg=colour234,nobold,nounderscore,noitalics]#[fg=colour85,bg=colour234] #(whoami)  #(uptime  | cut -d \" \" -f 1,2,3) #[fg=colour234,bg=colour234,nobold,nounderscore,noitalics]"
+set -g status-right "#[fg=colour234,bg=colour234,nobold,nounderscore,noitalics]#[fg=colour85,bg=colour234] %r  %a  %Y #[fg=colour238,bg=colour234,nobold,nounderscore,noitalics]#[fg=colour255,bg=colour238] #H #[fg=colour190,bg=colour238,nobold,nounderscore,noitalics]#[fg=colour17,bg=colour190] #(rainbarf --battery --remaining --rgb) "
+setw -g window-status-format "#[fg=colour234,bg=colour234,nobold,nounderscore,noitalics]#[default] #I  #W #[fg=colour234,bg=colour234,nobold,nounderscore,noitalics]"
+setw -g window-status-current-format "#[fg=colour234,bg=colour238,nobold,nounderscore,noitalics]#[fg=colour255,bg=colour238] #I  #W  #F #[fg=colour238,bg=colour234,nobold,nounderscore,noitalics]"

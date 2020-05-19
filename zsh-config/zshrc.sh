@@ -2,13 +2,13 @@ ZSH_DISABLE_COMPFIX=true
 ZSH=$HOME/.oh-my-zsh
 #autoload predict-on
 #predict-on
-#source ~/.zsh/zsh-vcs-prompt/zshrc.sh
+source ~/dotfiles/zsh-config/zsh-vcs-prompt.sh
 source ~/dotfiles/zsh-config/aliases.zsh
 source ~/dotfiles/zsh-config/private-aliases.zsh
-#source ~/.tmux/tmuxinator.zsh
+source ~/.tmux/tmuxinator.zsh
 export DISABLE_AUTO_TITLE=true
-#ZSH_VCS_PROMPT_ENABLE_CACHING='true'
-#RPROMPT='$(vcs_super_info)'
+ZSH_VCS_PROMPT_ENABLE_CACHING='true'
+RPROMPT='$(git_super_status)'
 export EDITOR='vim'
 ZSH_THEME="raj"
 fortune | cowsay

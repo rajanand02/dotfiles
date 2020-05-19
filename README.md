@@ -8,4 +8,5 @@
   ln -s ~/dotfiles/zsh/raj.zsh-theme ~/.oh-my-zsh/themes/raj.zsh-theme
   ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
   ln -s ~/dotfiles/terminator/config ~/.config/terminator/config
+  ln -s ~/dotfiels/tmux/rainbarf.conf ~/.rainbarf.conf
 ```

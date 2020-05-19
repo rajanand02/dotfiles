@@ -158,7 +158,7 @@ let g:tmuxline_preset = {
       \'c'    : ['#(whoami)', '#(uptime  | cut -d " " -f 1,2,3)'],
       \'win'  : ['#I', '#W'],
       \'cwin' : ['#I', '#W', '#F'],
-      \'z'    : '#(rainbarf --battery --remaining --no-rgb)',
+      \'z'    : '#(rainbarf --battery --remaining --rgb)',
       \'x'    : ['%r', '%a', '%Y'],
       \'y'    : '#H'}
 
