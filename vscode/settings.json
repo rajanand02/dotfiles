@@ -8,10 +8,7 @@
   "editor.fontFamily": "Fira code Retina, monospace",
   "editor.fontLigatures": true,
   "editor.lineNumbers": "relative",
-  "editor.rulers": [
-    100,
-    120
-  ],
+  "editor.rulers": [100, 120],
   "editor.tokenColorCustomizations": {
     "[Cobalt2]": {
       "variables": "#ff628c"
@@ -78,13 +75,13 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
- "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   /* Language */
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
     // "editor.fontLigatures": "'ss02', 'ss19'"
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -167,6 +164,6 @@
     "typescript",
     "javascriptreact",
     "typescriptreact"
-],
-"bracketPairColorizer.showBracketsInGutter": true
+  ],
+  "bracketPairColorizer.showBracketsInGutter": true
 }
