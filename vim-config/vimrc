@@ -52,7 +52,7 @@ set modifiable
 set wildmode=list:longest,full
 set wildmenu
 
-set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
+"set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 set t_Co=256
 
 " undo settings
@@ -62,245 +62,245 @@ set undolevels=1000                         "maximum number of changes that can 
 set undoreload=10000                        "maximum number lines to save
 
 " Color Scheme settings
-colorscheme cobalt2
+"colorscheme cobalt2
 "set background=dark
 "let g:solarized_termtrans=1
 "let g:solarized_termcolors=16
 "let g:solarized_contrast="normal"
-"let g:solarized_visibility="normal"
-
-
-"include key bindings
-source ~/dotfiles/vim-config/key-bindings.vim
-
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-"Break a line into two and retain cursor position from vysakh
-nmap <leader>b i<cr><esc>k$
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-
- "Enable snipMate compatibility feature.
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neocomplete#force_overwrite_completefunc = 1
-
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return neocomplete#close_popup() . "\<CR>"
-  " For no inserting <CR> key.
-  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplete#close_popup()
-inoremap <expr><C-e>  neocomplete#cancel_popup()
-
-" Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
-
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-"imap <C-i>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-i>     <Plug>(neosnippet_expand_or_jump)
+""let g:solarized_visibility="normal"
+"
+"
+""include key bindings
+"source ~/dotfiles/vim-config/key-bindings.vim
+"
+"" For snippet_complete marker.
+"if has('conceal')
+"  set conceallevel=2 concealcursor=i
+"endif
+""Break a line into two and retain cursor position from vysakh
+"nmap <leader>b i<cr><esc>k$
+"let g:acp_enableAtStartup = 0
+"let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_smart_case = 1
+"
+" "Enable snipMate compatibility feature.
+"let g:neosnippet#enable_snipmate_compatibility = 1
+"let g:neocomplete#force_overwrite_completefunc = 1
+"
+"" <CR>: close popup and save indent.
+"inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+"function! s:my_cr_function()
+"  return neocomplete#close_popup() . "\<CR>"
+"  " For no inserting <CR> key.
+"  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+"endfunction
+"" <TAB>: completion.
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"" <C-h>, <BS>: close popup and delete backword char.
+""inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+""inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+""inoremap <expr><C-y>  neocomplete#close_popup()
+""inoremap <expr><C-e>  neocomplete#cancel_popup()
+"
+"" Tell Neosnippet about the other snippets
+""let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+"
+""inoremap <expr><C-g>     neocomplete#undo_completion()
+""inoremap <expr><C-l>     neocomplete#complete_common_string()
+""imap <C-i>     <Plug>(neosnippet_expand_or_jump)
+""smap <C-i>     <Plug>(neosnippet_expand_or_jump)
 "xmap <C-i>     <Plug>(neosnippet_expand_target)
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)"
-      \: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-      \ "\<Plug>(neosnippet_expand_or_jump)"
-      \: "\<TAB>"
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"      \ "\<Plug>(neosnippet_expand_or_jump)"
+"      \: pumvisible() ? "\<C-n>" : "\<TAB>"
+"smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+"      \ "\<Plug>(neosnippet_expand_or_jump)"
+"      \: "\<TAB>"
 
 "if has('conceal')
-  "set conceallevel=2 concealcursor=i
+"  "set conceallevel=2 concealcursor=i
+""endif
+"
+""Enable omni completion.
+"autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+"autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+"autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+"autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+"
+"" airline configuration
+"set laststatus=2
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme= 'dark'
+"let g:airline#extensions#branch#enabled = 1
+"if !exists('g:airline_symbols')
+"  let g:airline_symbols = {}
 "endif
-
-"Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" airline configuration
-set laststatus=2
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme= 'dark'
-let g:airline#extensions#branch#enabled = 1
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline#extensions#branch#empty_message = 'No branch'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#syntastic#enabled= 1
-let g:airline#extensions#unite#enable= 1
-let g:airline#extensions#hunks#enable= 1
-let g:airline#extensions#tagbar#enable= 1
-"let g:tmuxline_theme = 'moloaki'
-let g:tomato#interval = 60 * 60
-let g:tomato#remind = "☻"
-let g:tomato#restinfo = "☺"
-let g:gitgutter_enabled = 0
-let g:airline#extensions#tmuxline#enabled = 0
-
-" custom preset with shell commands
-let g:tmuxline_preset = {
-      \'a'    : '#S',
-      \'b'       : '#W',
-      \'c'    : ['#(whoami)', '#(uptime  | cut -d " " -f 1,2,3)'],
-      \'win'  : ['#I', '#W'],
-      \'cwin' : ['#I', '#W', '#F'],
-      \'z'    : '#(rainbarf --battery --remaining --rgb)',
-      \'x'    : ['%r', '%a', '%Y'],
-      \'y'    : '#H'}
-
-"Signify"
-let g:signify_vcs_list = [ 'git' ]
-let g:signify_disable_by_default = 1
-let g:signify_mapping_toggle = '<leader>gt'
-let g:signify_mapping_next_hunk = '<leader>gj'
-let g:signify_mapping_prev_hunk = '<leader>gk'
-let g:signify_mapping_toggle_highlight = '<leader>gh'
-
-let g:cssColorVimDoNotMessMyUpdatetime = 1
-
+"let g:airline#extensions#branch#empty_message = 'No branch'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#syntastic#enabled= 1
+"let g:airline#extensions#unite#enable= 1
+"let g:airline#extensions#hunks#enable= 1
+"let g:airline#extensions#tagbar#enable= 1
+""let g:tmuxline_theme = 'moloaki'
+"let g:tomato#interval = 60 * 60
+"let g:tomato#remind = "☻"
+"let g:tomato#restinfo = "☺"
+"let g:gitgutter_enabled = 0
+"let g:airline#extensions#tmuxline#enabled = 0
+"
+"" custom preset with shell commands
+"let g:tmuxline_preset = {
+"      \'a'    : '#S',
+"      \'b'       : '#W',
+"      \'c'    : ['#(whoami)', '#(uptime  | cut -d " " -f 1,2,3)'],
+"      \'win'  : ['#I', '#W'],
+"      \'cwin' : ['#I', '#W', '#F'],
+"      \'z'    : '#(rainbarf --battery --remaining --rgb)',
+"      \'x'    : ['%r', '%a', '%Y'],
+"      \'y'    : '#H'}
+"
+""Signify"
+"let g:signify_vcs_list = [ 'git' ]
+"let g:signify_disable_by_default = 1
+"let g:signify_mapping_toggle = '<leader>gt'
+"let g:signify_mapping_next_hunk = '<leader>gj'
+"let g:signify_mapping_prev_hunk = '<leader>gk'
+"let g:signify_mapping_toggle_highlight = '<leader>gh'
+"
+"let g:cssColorVimDoNotMessMyUpdatetime = 1
+"
 "Starify settings
-let g:startify_custom_footer =
-      \ map(split(system('tips | cowsay here comes the mighty weapon'), '\n'), '"   ". v:val') + ['']
-let g:startify_custom_header= [
-      \ ' _      _   _                 _ _',
-      \ '| |    | | ( )               | | |',
-      \ '| | ___| |_|/ ___   _ __ ___ | | |',
-      \ '| |/ _ \ __| / __| |  __/ _ \| | |',
-      \ '| |  __/ |_  \__ \ | | | (_) | | |',
-      \ '|_|\___|\__| |___/ |_|  \___/|_|_|',
-      \ '',
-      \ '',
-      \ ]
-"let g:startify_files_number        = 10
-let g:startify_session_persistence = 1
-let g:startify_session_autoload    = 1
-let g:startify_enable_special      = 0
-let g:startify_files_number        = 5
-let g:startify_change_to_dir       = 0
-
-"Easy motion leader key-mapping
-let g:EasyMotion_leader_key = '<Leader><Leader>'
-
-"Nerdtree settings
-let g:nerdtree_tabs_open_on_console_startup=1
-let g:nerdtree_tabs_smart_startup_focus = 1
-let g:nerdtree_tabs_open_on_new_tab = 1
-let g:nerdtree_tabs_meaningful_tab_names = 1
-let g:nerdtree_tabs_autoclose = 1
-let g:nerdtree_tabs_synchronize_view = 1
-let g:nerdtree_tabs_synchronize_focus = 1
-let g:nerdtree_tabs_focus_on_files = 1
-autocmd VimEnter * NERDTree
-"autocmd VimEnter * NERDTreeMirror
-"autocmd VimEnter * NERDTreeMirrorOpen
-"autocmd VimEnter * NERDTreeTabsOpen
-autocmd VimEnter * wincmd p
-
-"vimfiler settings
-"let g:vimfiler_as_default_explorer = 1
-"autocmd VimEnter * VimFilerExplorer
+"let g:startify_custom_footer =
+"      \ map(split(system('tips | cowsay here comes the mighty weapon'), '\n'), '"   ". v:val') + ['']
+"let g:startify_custom_header= [
+"      \ ' _      _   _                 _ _',
+"      \ '| |    | | ( )               | | |',
+"      \ '| | ___| |_|/ ___   _ __ ___ | | |',
+"      \ '| |/ _ \ __| / __| |  __/ _ \| | |',
+"      \ '| |  __/ |_  \__ \ | | | (_) | | |',
+"      \ '|_|\___|\__| |___/ |_|  \___/|_|_|',
+"      \ '',
+"      \ '',
+"      \ ]
+""let g:startify_files_number        = 10
+"let g:startify_session_persistence = 1
+"let g:startify_session_autoload    = 1
+"let g:startify_enable_special      = 0
+"let g:startify_files_number        = 5
+"let g:startify_change_to_dir       = 0
+"
+""Easy motion leader key-mapping
+"let g:EasyMotion_leader_key = '<Leader><Leader>'
+"
+""Nerdtree settings
+"let g:nerdtree_tabs_open_on_console_startup=1
+"let g:nerdtree_tabs_smart_startup_focus = 1
+"let g:nerdtree_tabs_open_on_new_tab = 1
+"let g:nerdtree_tabs_meaningful_tab_names = 1
+"let g:nerdtree_tabs_autoclose = 1
+"let g:nerdtree_tabs_synchronize_view = 1
+"let g:nerdtree_tabs_synchronize_focus = 1
+"let g:nerdtree_tabs_focus_on_files = 1
+"autocmd VimEnter * NERDTree
+""autocmd VimEnter * NERDTreeMirror
+""autocmd VimEnter * NERDTreeMirrorOpen
+""autocmd VimEnter * NERDTreeTabsOpen
 "autocmd VimEnter * wincmd p
+"
+""vimfiler settings
+""let g:vimfiler_as_default_explorer = 1
+""autocmd VimEnter * VimFilerExplorer
+""autocmd VimEnter * wincmd p
+"
+""Syntastic customization
+"let g:syntastic_error_symbol = '✗'
+"let g:syntastic_style_error_symbol = '✠'
+"let g:syntastic_warning_symbol = '∆'
+"let g:syntastic_style_warning_symbol = '☢'
+"let g:syntastic_javascript_checkers = ['eslint']
+"let g:jsx_ext_required = 0
+""VimShell settings and key mappings
+"let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+"let g:vimshell_prompt =  '~~> '
+"
+""emmet zencoding
+"let g:user_emmet_install_global = 0
+"autocmd FileType html,css EmmetInstall
+"let g:user_emmet_leader_key='<C-e>'
+"let g:user_emmet_settings = {
+"      \  'php' : {
+"      \    'extends' : 'html',
+"      \    'filters' : 'c',
+"      \  },
+"      \  'xml' : {
+"      \    'extends' : 'html',
+"      \  },
+"      \  'haml' : {
+"      \    'extends' : 'html',
+"      \  },
+"      \  'eruby' : {
+"      \    'extends' : 'html',
+"      \  },
+"      \}
+"
+""Matchit vim
+"runtime! macros/matchit.vim
+"au Filetype css,javascript
+"      \ let b:match_words = &matchpairs
+"
+"
+"let g:mustache_abbreviations = 1
+"
+"let g:multi_cursor_use_default_mapping=0
+"" Default mapping
+"let g:multi_cursor_next_key='<C-n>'
+"let g:multi_cursor_prev_key='<C-p>'
+"let g:multi_cursor_skip_key='<C-x>'
+"let g:multi_cursor_quit_key='<Esc>'
 
-"Syntastic customization
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_style_error_symbol = '✠'
-let g:syntastic_warning_symbol = '∆'
-let g:syntastic_style_warning_symbol = '☢'
-let g:syntastic_javascript_checkers = ['eslint']
-let g:jsx_ext_required = 0
-"VimShell settings and key mappings
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_prompt =  '~~> '
-
-"emmet zencoding
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-let g:user_emmet_leader_key='<C-e>'
-let g:user_emmet_settings = {
-      \  'php' : {
-      \    'extends' : 'html',
-      \    'filters' : 'c',
-      \  },
-      \  'xml' : {
-      \    'extends' : 'html',
-      \  },
-      \  'haml' : {
-      \    'extends' : 'html',
-      \  },
-      \  'eruby' : {
-      \    'extends' : 'html',
-      \  },
-      \}
-
-"Matchit vim
-runtime! macros/matchit.vim
-au Filetype css,javascript
-      \ let b:match_words = &matchpairs
-
-
-let g:mustache_abbreviations = 1
-
-let g:multi_cursor_use_default_mapping=0
-" Default mapping
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
-
-if &term =~ '^screen'
-  " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
-  execute "set t_kP=\e[5;*~"
-  execute "set t_kN=\e[6;*~"
-
-  " Arrow keys http://unix.stackexchange.com/a/34723
-  execute "set <xUp>=\e[1;*A"
-  execute "set <xDown>=\e[1;*B"
-  execute "set <xRight>=\e[1;*C"
-  execute "set <xLeft>=\e[1;*D"
-endif
-"to consider scss files as scss.css files
-au BufRead,BufNewFile *.scss set filetype=scss.css
-"for vim css3 syntax highlight
-augroup VimCSS3Syntax
-  autocmd!
-
-  autocmd FileType css setlocal iskeyword+=-
-augroup END
-let g:vim_markdown_folding_disabled=1
-let g:CoffeeAutoDisabled= 0         " Disables autotaging on save (Default: 0 [false]
-"let g:CoffeeAutoTagFile=<filename>       " Name of the generated tag file (Default: ./tags)
-let g:CoffeeAutoTagIncludeVars= 1  " Includes variables (Default: 0 [false])
-let g:CoffeeAutoTagTagRelative= 1  " Sets file names to the relative path from the tag file location to the tag file location (Default: 1 [true])
-let g:mustache_abbreviations = 1
-if has("autocmd")
-  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-endif
-"emmet add online in html and css
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ }
-
-" Use octodown as default build command for Markdown files
-autocmd FileType markdown let b:dispatch = 'octodown --live-reload %'
-
-set viminfo='100,n$HOME/.vim/files/info/viminfo
+"if &term =~ '^screen'
+"  " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
+"  execute "set t_kP=\e[5;*~"
+"  execute "set t_kN=\e[6;*~"
+"
+"  " Arrow keys http://unix.stackexchange.com/a/34723
+"  execute "set <xUp>=\e[1;*A"
+"  execute "set <xDown>=\e[1;*B"
+"  execute "set <xRight>=\e[1;*C"
+"  execute "set <xLeft>=\e[1;*D"
+"endif
+""to consider scss files as scss.css files
+"au BufRead,BufNewFile *.scss set filetype=scss.css
+""for vim css3 syntax highlight
+"augroup VimCSS3Syntax
+"  autocmd!
+"
+"  autocmd FileType css setlocal iskeyword+=-
+"augroup END
+"let g:vim_markdown_folding_disabled=1
+"let g:CoffeeAutoDisabled= 0         " Disables autotaging on save (Default: 0 [false]
+""let g:CoffeeAutoTagFile=<filename>       " Name of the generated tag file (Default: ./tags)
+"let g:CoffeeAutoTagIncludeVars= 1  " Includes variables (Default: 0 [false])
+"let g:CoffeeAutoTagTagRelative= 1  " Sets file names to the relative path from the tag file location to the tag file location (Default: 1 [true])
+"let g:mustache_abbreviations = 1
+"if has("autocmd")
+"  au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+"  au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+"  au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+"endif
+""emmet add online in html and css
+"let g:user_emmet_install_global = 0
+"autocmd FileType html,css EmmetInstall
+"
+"let g:ctrlp_custom_ignore = {
+"  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+"  \ 'file': '\v\.(exe|so|dll)$',
+"  \ }
+"
+"" Use octodown as default build command for Markdown files
+"autocmd FileType markdown let b:dispatch = 'octodown --live-reload %'
+"
+"set viminfo='100,n$HOME/.vim/files/info/viminfo

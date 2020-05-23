@@ -28,7 +28,7 @@ alias autoremove='sudo apt-get autoremove'
 alias purge='sudo apt-get purge'
 
 # open config files
-alias zrc='~/dotfiles/ && vim zsh-config/zshrc'
+alias zrc='~/dotfiles/ && vim zsh-config/zshrc.sh'
 alias vrc='~/dotfiles/ && vim vim-config/vimrc'
 alias tc='~/dotfiles/ && vim tmux/tmux.conf'
 alias ohmy='cd ~/dotfiles/oh-my-zsh && vim'
@@ -53,3 +53,9 @@ alias nr='npm run'
 
 #network
 alias restart-network='sudo /etc/init.d/network-manager restart && sudo /etc/init.d/networking restart'
+
+# https://github.com/tmuxinator/tmuxinator#shorthand
+alias mux=tmuxinator
+
+# mac specific aliases
+alias binstall='brew install'
