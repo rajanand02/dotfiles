@@ -25,7 +25,7 @@
   // "editor.gotoLocation.multiple": "gotoAndPeek",
   "editor.cursorBlinking": "expand",
   /* Window */
-  "window.zoomLevel": 3,
+  "window.zoomLevel": 0,
   "window.menuBarVisibility": "toggle",
   "window.titleBarStyle": "custom",
   /* Files */
@@ -78,7 +78,10 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   /* Language */
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -132,14 +135,16 @@
   /* WorkBench settings */
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.panel.defaultLocation": "bottom",
   "workbench.activityBar.visible": true,
   "workbench.statusBar.visible": true,
   "workbench.colorCustomizations": {
     "titleBar.activeForeground": "#000",
     "titleBar.inactiveForeground": "#000000CC",
     "titleBar.activeBackground": "#FFC600",
-    "titleBar.inactiveBackground": "#FFC600CC"
+    "titleBar.inactiveBackground": "#FFC600CC",
+    "statusBar.background": "#FFC600CC",
+    "statusBar.foreground": "#000",
+    "statusBarItem.hoverBackground": "#FFC600"
   },
   "workbench.colorTheme": "Cobalt2",
   "workbench.iconTheme": "material-icon-theme",
@@ -147,7 +152,7 @@
   /* Sync settings */
   "sync.gist": "2c80f9b80e1b45704e4a3bab97c07ba7",
   "sync.autoDownload": false,
-  "sync.autoUpload": false,
+  "sync.autoUpload": true,
   "sync.forceDownload": false,
   "sync.quietSync": false,
   /* Misc */
@@ -165,5 +170,6 @@
     "javascriptreact",
     "typescriptreact"
   ],
-  "bracketPairColorizer.showBracketsInGutter": true
+  "bracketPairColorizer.showBracketsInGutter": true,
+  "editor.multiCursorModifier": "ctrlCmd"
 }

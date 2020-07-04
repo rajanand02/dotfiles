@@ -17,7 +17,7 @@ fortune | cowsay
 # ubuntu
 #plugins=(zsh-autosuggestions debian git git-flow github git-remote-branch gitignore history sudo battery nanoc zsh-syntax-highlighting z ubuntu node npm nvm cp web-search command-not-found common-aliases frontend-search)
 # mac
-plugins=(zsh-autosuggestions git git-flow github git-remote-branch gitignore history sudo zsh-syntax-highlighting z node npm nvm cp command-not-found common-aliases frontend-search)
+plugins=(zsh-autosuggestions git git-flow github gitignore history sudo zsh-syntax-highlighting z node npm nvm cp command-not-found common-aliases frontend-search)
 
 source $ZSH/oh-my-zsh.sh
 # source ~/.nvm/nvm.sh

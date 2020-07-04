@@ -51,6 +51,9 @@ alias nid='npm install -D'
 alias nu='npm uninstall'
 alias nr='npm run'
 
+# dev
+alias cra='create-react-app'
+
 #network
 alias restart-network='sudo /etc/init.d/network-manager restart && sudo /etc/init.d/networking restart'
 
